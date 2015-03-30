@@ -30,65 +30,65 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($pacientes as $paciente)
+                @foreach($patients as $patient)
                 <tr>
                     <td>
-                        {!! $paciente->nombre !!}
+                        {!! $patient->name !!}
                     </td>
                     <td>
-                        {!! $paciente->apellido !!}
+                        {!! $patient->last_name !!}
                     </td>
                     <td>
-                        {!! $paciente->dni !!}
+                        {!! $patient->dni !!}
                     </td>
                     <td>
-                        {!! $paciente->telefono !!}
+                        {!! $patient->phone !!}
                     </td>
                     <td>
-                        {!! $paciente->celular !!}
+                        {!! $patient->cell_phone !!}
                     </td>
                     <td>
-                        {!! $paciente->domicilio !!}
+                        {!! $patient->address !!}
                     </td>
                     <td>
-                        {!! $paciente->nacimiento !!}
+                        {!! $patient->birth_date !!}
                     </td>
                     <td>
-                        {!! $paciente->enviado !!}
+                        {!! $patient->send_for !!}
                     </td>
                     <td>
-                        @if($paciente->jubilado  === 1)
+                        @if($patient->retired  === 1)
                             Si
                         @else
                             No
                         @endif
                     </td>
                     <td>
-                        @if($paciente->estudiante  === 1)
+                        @if($patient->student  === 1)
                             Si
                         @else
                             No
                         @endif
                     </td>
                     <td>
-                        {!! $paciente->ocupacion !!}
+                        {!! $patient->occupation !!}
                     </td>
                     <td>
-                        @if($paciente->aten_masc === 1)
+                        @if($patient->masc_atten === 1)
                             Si
                         @else
                             No
                         @endif
                     </td>
                     <td>
-                        @if($paciente->aten_fem === 1)
+                        @if($patient->fem_atten === 1)
                             Si
                         @else
                             No
                         @endif
                     </td>
                     <td>
-                        @if($paciente->aten_pb === 1)
+                        @if($patient->pb_atten === 1)
                             Si
                         @else
                             No
@@ -97,16 +97,16 @@
 
 
                     <td>
-                        {!! Form::open(['method' => 'get', 'route' => ['pacientes.edit', $paciente->id]]) !!}
+                        {!! Form::open(['method' => 'get', 'route' => ['patients.edit', $patient->id]]) !!}
 
-                        {!! Form::submit('Editar', array('class'=>'btn btn-sm btn-primary')) !!}
+                            {!! Form::submit('Editar', array('class'=>'btn btn-sm btn-primary')) !!}
 
                         {!! Form::close() !!}
                     </td>
                     <td>
-                        {!! Form::open(['method' => 'DELETE', 'route' => ['pacientes.destroy', $paciente->id]]) !!}
+                        {!! Form::open(['method' => 'DELETE', 'route' => ['patients.destroy', $patient->id]]) !!}
 
-                        {!! Form::submit('Eliminar', array('class'=>'btn btn-sm btn-danger')) !!}
+                            {!! Form::submit('Eliminar', array('class'=>'btn btn-sm btn-danger')) !!}
 
                         {!! Form::close() !!}
                     </td>
@@ -116,7 +116,7 @@
             </table>
 
 
-            <a href="/pacientes/create">Crear</a>
+            <a href="/patients/create">Crear</a>
         </div>
     </div>
     @stop

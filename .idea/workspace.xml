@@ -22,30 +22,7 @@
     <favorites_list name="www" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="TerapeutasController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TerapeutasController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="127" column="9" selection-start="2536" selection-end="2666" vertical-scroll-proportion="-30.416666" vertical-offset="1175" max-vertical-offset="2055">
-              <folding>
-                <element signature="e#39#61#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SupervisoresController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SupervisoresController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="0" selection-start="2362" selection-end="2362" vertical-scroll-proportion="0.89204544" vertical-offset="910" max-vertical-offset="1890">
-              <folding>
-                <element signature="e#39#61#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -61,24 +38,46 @@
         <option value="$PROJECT_DIR$/resources/views/terapeutas/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/header.blade.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/app/Terapeuta.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_03_25_170755_create_pacientes_table.php" />
         <option value="$PROJECT_DIR$/app/Paciente.php" />
         <option value="$PROJECT_DIR$/resources/views/pacientes/index.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_03_21_175725_create_terapeutas_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/terapeutas/edit.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/TerapeutasController.php" />
         <option value="$PROJECT_DIR$/resources/views/terapeutas/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pacientes/edit.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/app/Supervisor.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PacientesController.php" />
-        <option value="$PROJECT_DIR$/resources/views/terapeutas/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pacientes/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/supervisores/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/supervisores/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/supervisores/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SupervisoresController.php" />
+        <option value="$PROJECT_DIR$/app/Terapeuta.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/TerapeutasController.php" />
+        <option value="$PROJECT_DIR$/resources/views/terapeutas/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/terapeutas/form.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/terapeutas/edit.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_03_20_192000_create_tests_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_03_30_141027_create_therapists_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_03_30_141654_create_supervisors_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_03_30_141337_create_patients_table.php" />
+        <option value="$PROJECT_DIR$/app/Therapist.php" />
+        <option value="$PROJECT_DIR$/resources/views/therapists/form.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/TherapistsController.php" />
+        <option value="$PROJECT_DIR$/resources/views/therapists/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/therapists/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/therapists/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/patients/create.blade.php" />
+        <option value="$PROJECT_DIR$/app/Patient.php" />
+        <option value="$PROJECT_DIR$/resources/views/patients/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/PatientsController.php" />
+        <option value="$PROJECT_DIR$/resources/views/patients/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/patients/form.blade.php" />
+        <option value="$PROJECT_DIR$/app/Supervisor.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/SupervisorsController.php" />
+        <option value="$PROJECT_DIR$/resources/views/supervisors/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/supervisors/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/supervisors/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/supervisors/form.blade.php" />
       </list>
     </option>
   </component>
@@ -89,8 +88,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="3" />
-    <option name="y" value="26" />
+    <option name="y" value="24" />
     <option name="width" value="1870" />
     <option name="height" value="1024" />
   </component>
@@ -120,6 +118,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -183,64 +182,6 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="terapeutas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="supervisores" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -298,7 +239,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -359,16 +299,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="3" y="26" width="1870" height="1024" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="24" width="1870" height="1024" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6900238" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.68991417" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24781181" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25328228" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39786223" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -401,73 +341,19 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TerapeutasController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="38" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1380">
-          <folding>
-            <element signature="e#39#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/terapeutas/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="150">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TerapeutasController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="38" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1380">
-          <folding>
-            <element signature="e#39#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/terapeutas/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="150">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="51" selection-start="637" selection-end="637" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TerapeutasController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="4" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1350">
-          <folding>
-            <element signature="e#39#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/terapeutas/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="13" selection-start="13" selection-end="13" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <folding />
-        </state>
+        <state line="22" column="51" selection-start="637" selection-end="637" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="27" selection-start="479" selection-end="479" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="3090">
-          <folding />
-        </state>
+        <state line="16" column="27" selection-start="479" selection-end="479" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="3090" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="27" selection-start="479" selection-end="479" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="3090">
-          <folding />
-        </state>
+        <state line="16" column="27" selection-start="479" selection-end="479" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="3090" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/services.php">
@@ -506,11 +392,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="894" />
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
@@ -528,178 +414,227 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="617" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="4" selection-start="26" selection-end="26" vertical-scroll-proportion="0.033898305" vertical-offset="0" max-vertical-offset="885" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="934" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/terapeutas/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="135" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="730">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Paciente.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="31" selection-start="107" selection-end="107" vertical-scroll-proportion="0.07594936" vertical-offset="0" max-vertical-offset="790">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="730" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="199" column="52" selection-start="7249" selection-end="7249" vertical-scroll-proportion="0.82151896" vertical-offset="2336" max-vertical-offset="3150">
-          <folding />
-        </state>
+        <state line="199" column="52" selection-start="7249" selection-end="7249" vertical-scroll-proportion="0.82151896" vertical-offset="2336" max-vertical-offset="3150" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/illuminate/html/FormFacade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="814">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_03_25_170755_create_pacientes_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="52" selection-start="611" selection-end="611" vertical-scroll-proportion="0.3911343" vertical-offset="0" max-vertical-offset="767">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_03_21_175725_create_terapeutas_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="31" selection-start="592" selection-end="592" vertical-scroll-proportion="0.3911343" vertical-offset="0" max-vertical-offset="767">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pacientes/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="28" selection-start="2828" selection-end="2828" vertical-scroll-proportion="0.80759495" vertical-offset="652" max-vertical-offset="1905">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="814" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="630" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="390">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="630" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="390" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/illuminate/html/FormBuilder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="453" column="29" selection-start="11339" selection-end="11339" vertical-scroll-proportion="0.2683246" vertical-offset="6560" max-vertical-offset="14670">
+        <state line="453" column="29" selection-start="11339" selection-end="11339" vertical-scroll-proportion="0.2683246" vertical-offset="6560" max-vertical-offset="14670" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="4" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="600">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pacientes/edit.blade.php">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="71" selection-start="2452" selection-end="2452" vertical-scroll-proportion="0.77088606" vertical-offset="141" max-vertical-offset="1365">
+        <state line="142" column="51" selection-start="2955" selection-end="2955" vertical-scroll-proportion="0.35227272" vertical-offset="1475" max-vertical-offset="50115">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="4" selection-start="11" selection-end="11" vertical-scroll-proportion="0.03409091" vertical-offset="0" max-vertical-offset="880">
+          <folding>
+            <element signature="e#7#48#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_03_30_141027_create_therapists_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="22" selection-start="118" selection-end="118" vertical-scroll-proportion="0.08522727" vertical-offset="0" max-vertical-offset="880">
+          <folding>
+            <element signature="e#7#48#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="4" selection-start="11" selection-end="11" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="630">
+          <folding>
+            <element signature="e#7#48#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_03_30_141654_create_supervisors_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="23" selection-start="119" selection-end="119" vertical-scroll-proportion="0.06818182" vertical-offset="0" max-vertical-offset="880">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_03_30_141337_create_patients_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="20" selection-start="116" selection-end="116" vertical-scroll-proportion="0.06818182" vertical-offset="0" max-vertical-offset="880">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/therapists/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="25" selection-start="1483" selection-end="1483" vertical-scroll-proportion="0.48863637" vertical-offset="275" max-vertical-offset="1155">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/patients/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="41" selection-start="364" selection-end="364" vertical-scroll-proportion="0.2215909" vertical-offset="0" max-vertical-offset="880">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/therapists/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="28" selection-start="350" selection-end="350" vertical-scroll-proportion="0.2215909" vertical-offset="0" max-vertical-offset="880">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/patients/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="28" selection-start="3576" selection-end="3576" vertical-scroll-proportion="1.2772727" vertical-offset="496" max-vertical-offset="1905">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/therapists/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="83" selection-start="376" selection-end="420" vertical-scroll-proportion="0.2249135" vertical-offset="0" max-vertical-offset="867">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Patient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="21" selection-start="338" selection-end="338" vertical-scroll-proportion="0.32386363" vertical-offset="0" max-vertical-offset="880">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/therapists/form.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="105" selection-start="1466" selection-end="1559" vertical-scroll-proportion="0.5625" vertical-offset="0" max-vertical-offset="880">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PatientsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="799" selection-end="799" vertical-scroll-proportion="0.2" vertical-offset="544" max-vertical-offset="1740">
+          <folding>
+            <element signature="e#39#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Therapist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="97" selection-end="262" vertical-scroll-proportion="0.11931818" vertical-offset="0" max-vertical-offset="880">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Supervisor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="14" selection-start="215" selection-end="220" vertical-scroll-proportion="0.22753793" vertical-offset="0" max-vertical-offset="857">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SupervisorsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="7" selection-start="257" selection-end="257" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="1725">
+          <folding>
+            <element signature="e#39#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/supervisors/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="32" selection-start="1944" selection-end="1944" vertical-scroll-proportion="0.84659094" vertical-offset="155" max-vertical-offset="1035">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TherapistsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="6" selection-start="1299" selection-end="1299" vertical-scroll-proportion="0.30113637" vertical-offset="950" max-vertical-offset="1830">
+          <folding>
+            <element signature="e#39#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/supervisors/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="53" selection-start="324" selection-end="324" vertical-scroll-proportion="0.20454545" vertical-offset="0" max-vertical-offset="880">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="34" selection-start="728" selection-end="728" vertical-scroll-proportion="0.28481013" vertical-offset="0" max-vertical-offset="790">
+        <state line="22" column="25" selection-start="611" selection-end="611" vertical-scroll-proportion="0.2215909" vertical-offset="0" max-vertical-offset="880">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Terapeuta.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/supervisors/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="32" selection-start="99" selection-end="107" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="225">
+        <state line="13" column="82" selection-start="425" selection-end="425" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="330">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PacientesController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/patients/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="29" selection-start="1920" selection-end="1920" vertical-scroll-proportion="1.5822785" vertical-offset="40" max-vertical-offset="2205">
-          <folding>
-            <element signature="e#39#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pacientes/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="0" selection-start="4398" selection-end="4398" vertical-scroll-proportion="0.91477275" vertical-offset="500" max-vertical-offset="1410">
+        <state line="13" column="80" selection-start="362" selection-end="404" vertical-scroll-proportion="0.2215909" vertical-offset="0" max-vertical-offset="880">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/terapeutas/create.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/patients/form.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="233" selection-end="233" vertical-scroll-proportion="0.17045455" vertical-offset="0" max-vertical-offset="1020">
+        <state line="61" column="105" selection-start="2913" selection-end="3007" vertical-scroll-proportion="0.82272726" vertical-offset="191" max-vertical-offset="1095">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/supervisores/create.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/supervisors/form.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="55" selection-start="1505" selection-end="1505" vertical-scroll-proportion="0.57954544" vertical-offset="0" max-vertical-offset="900">
+        <state line="26" column="8" selection-start="1182" selection-end="1182" vertical-scroll-proportion="0.4431818" vertical-offset="0" max-vertical-offset="880">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/supervisores/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="75" selection-start="1600" selection-end="1600" vertical-scroll-proportion="0.73636365" vertical-offset="72" max-vertical-offset="1035">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/terapeutas/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="5" selection-start="0" selection-end="2287" vertical-scroll-proportion="0.925" vertical-offset="251" max-vertical-offset="1155">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/supervisores/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="118" selection-start="1799" selection-end="1799" vertical-scroll-proportion="0.66477275" vertical-offset="0" max-vertical-offset="880">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/terapeutas/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="22" selection-start="0" selection-end="2534" vertical-scroll-proportion="0.82272726" vertical-offset="41" max-vertical-offset="945">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TerapeutasController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="9" selection-start="2536" selection-end="2666" vertical-scroll-proportion="-30.416666" vertical-offset="1175" max-vertical-offset="2055">
-          <folding>
-            <element signature="e#39#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SupervisoresController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="0" selection-start="2362" selection-end="2362" vertical-scroll-proportion="0.89204544" vertical-offset="910" max-vertical-offset="1890">
-          <folding>
-            <element signature="e#39#61#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

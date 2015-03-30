@@ -21,32 +21,32 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($supervisores as $supervisor)
+                @foreach($supervisors as $supervisor)
                 <tr>
                     <td>
-                        {!! $supervisor->nombre !!}
+                        {!! $supervisor->name !!}
                     </td>
                     <td>
-                        {!! $supervisor->apellido !!}
+                        {!! $supervisor->last_name !!}
                     </td>
                     <td>
-                        {!! $supervisor->telefono !!}
+                        {!! $supervisor->phone !!}
                     </td>
                     <td>
-                        {!! $supervisor->celular !!}
+                        {!! $supervisor->cell_phone !!}
                     </td>
                     <td>
                         {!! $supervisor->email !!}
                     </td>
                     <td>
-                        {!! Form::open(['method' => 'get', 'route' => ['supervisores.edit', $supervisor->id]]) !!}
+                        {!! Form::open(['method' => 'get', 'route' => ['supervisors.edit', $supervisor->id]]) !!}
 
                         {!! Form::submit('Editar', array('class'=>'btn btn-sm btn-primary')) !!}
 
                         {!! Form::close() !!}
                     </td>
                     <td>
-                        {!! Form::open(['method' => 'DELETE', 'route' => ['supervisores.destroy', $supervisor->id]]) !!}
+                        {!! Form::open(['method' => 'DELETE', 'route' => ['supervisors.destroy', $supervisor->id]]) !!}
 
                         {!! Form::submit('Eliminar', array('class'=>'btn btn-sm btn-danger')) !!}
 
@@ -58,7 +58,7 @@
             </table>
 
 
-            <a href="/supervisores/create">Crear</a>
+            <a href="/supervisors/create">Crear</a>
         </div>
     </div>
     @stop

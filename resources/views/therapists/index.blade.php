@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h1> Lista de Terapeutas </h1>
+            <h1> Lista de Therapists </h1>
         </div>
     </div>
     <div class="row">
@@ -23,38 +23,38 @@
                     </tr>
                 </thead>
             <tbody>
-                @foreach($terapeutas as $terapeuta)
+                @foreach($therapists as $therapist)
                 <tr>
                     <td>
-                        {!! $terapeuta->nombre !!}
+                        {!! $therapist->name !!}
                     </td>
                     <td>
-                        {!! $terapeuta->apellido !!}
+                        {!! $therapist->last_name !!}
                     </td>
                     <td>
-                        {!! $terapeuta->dni !!}
+                        {!! $therapist->dni !!}
                     </td>
                     <td>
-                        {!! $terapeuta->telefono !!}
+                        {!! $therapist->phone !!}
                     </td>
                     <td>
-                        {!! $terapeuta->celular !!}
+                        {!! $therapist->cell_phone !!}
                     </td>
                     <td>
-                        {!! $terapeuta->ano_de_cursada !!}
+                        {!! $therapist->career_year !!}
                     </td>
                     <td>
-                        {!! $terapeuta->email !!}
+                        {!! $therapist->email !!}
                     </td>
                     <td>
-                        {!! Form::open(['method' => 'get', 'route' => ['terapeutas.edit', $terapeuta->id]]) !!}
+                        {!! Form::open(['method' => 'get', 'route' => ['therapists.edit', $therapist->id]]) !!}
 
                         {!! Form::submit('Editar', array('class'=>'btn btn-sm btn-primary')) !!}
 
                         {!! Form::close() !!}
                     </td>
                     <td>
-                        {!! Form::open(['method' => 'DELETE', 'route' => ['terapeutas.destroy', $terapeuta->id]]) !!}
+                        {!! Form::open(['method' => 'DELETE', 'route' => ['therapists.destroy', $therapist->id]]) !!}
 
                         {!! Form::submit('Eliminar', array('class'=>'btn btn-sm btn-danger')) !!}
 
@@ -66,7 +66,7 @@
             </table>
 
 
-                    <a href="/terapeutas/create">Crear</a>
+                    <a href="/therapists/create">Crear</a>
     </div>
 </div>
 @stop

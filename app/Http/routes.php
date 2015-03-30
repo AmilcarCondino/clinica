@@ -20,6 +20,6 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::resource('terapeutas', 'TerapeutasController');
-Route::resource('pacientes', 'PacientesController');
-Route::resource('supervisores', 'SupervisoresController');
+Route::resource('therapists', 'TherapistsController');
+Route::resource('patients', 'PatientsController');
+Route::resource('supervisors', 'SupervisorsController');
