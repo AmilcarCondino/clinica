@@ -10,8 +10,8 @@
         <a href="/supervisors">Spuervisores index</a>
 
         <div class="col-sm-12">
-            {!! Form::open(array('url' => 'supervisors')) !!}
-                @include('supervisors.form')
+            {!! Form::open(array('url' => 'supervisores')) !!}
+                @include('supervisors.form', ['submitButtonText' => 'Crear Supervisor'])
             {!! Form::close() !!}
         </div>
     </div>

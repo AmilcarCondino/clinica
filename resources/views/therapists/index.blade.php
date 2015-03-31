@@ -26,35 +26,35 @@
                 @foreach($therapists as $therapist)
                 <tr>
                     <td>
-                        {!! $therapist->name !!}
+                        {{ $therapist->name }}
                     </td>
                     <td>
-                        {!! $therapist->last_name !!}
+                        {{ $therapist->last_name }}
                     </td>
                     <td>
-                        {!! $therapist->dni !!}
+                        {{ $therapist->dni }}
                     </td>
                     <td>
-                        {!! $therapist->phone !!}
+                        {{ $therapist->phone }}
                     </td>
                     <td>
-                        {!! $therapist->cell_phone !!}
+                        {{ $therapist->cell_phone }}
                     </td>
                     <td>
-                        {!! $therapist->career_year !!}
+                        {{ $therapist->career_year }}
                     </td>
                     <td>
-                        {!! $therapist->email !!}
+                        {{ $therapist->email }}
                     </td>
                     <td>
-                        {!! Form::open(['method' => 'get', 'route' => ['therapists.edit', $therapist->id]]) !!}
+                        {!! Form::open(['method' => 'get', 'route' => ['terapeutas.edit', $therapist->id]]) !!}
 
                         {!! Form::submit('Editar', array('class'=>'btn btn-sm btn-primary')) !!}
 
                         {!! Form::close() !!}
                     </td>
                     <td>
-                        {!! Form::open(['method' => 'DELETE', 'route' => ['therapists.destroy', $therapist->id]]) !!}
+                        {!! Form::open(['method' => 'DELETE', 'route' => ['terapeutas.destroy', $therapist->id]]) !!}
 
                         {!! Form::submit('Eliminar', array('class'=>'btn btn-sm btn-danger')) !!}
 
@@ -66,7 +66,7 @@
             </table>
 
 
-                    <a href="/therapists/create">Crear</a>
+                    <a href="/terapeutas/create">Crear</a>
     </div>
 </div>
 @stop

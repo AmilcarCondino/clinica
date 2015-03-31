@@ -29,7 +29,7 @@ class SupervisorsController extends Controller {
 	public function create()
 	{
 		//
-        return view('supervisors.create');
+        return view('supervisors.create', compact('supervisors'));
 	}
 
 	/**
@@ -44,7 +44,7 @@ class SupervisorsController extends Controller {
 
         Supervisor::create($input);
 
-        return redirect('supervisors');
+        return redirect('supervisores');
 	}
 
 	/**
@@ -86,7 +86,7 @@ class SupervisorsController extends Controller {
 
         $supervisor->update($input);
 
-        return redirect('supervisors');
+        return redirect('supervisores');
 
 	}
 
@@ -102,7 +102,7 @@ class SupervisorsController extends Controller {
         $supervisor = Supervisor::findOrFail($id);
 
         if ($supervisor->delete()) {
-            return redirect('supervisors');
+            return redirect('supervisores');
         }
 	}
 

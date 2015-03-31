@@ -7,10 +7,10 @@
 </div>
 
 <div class="col-sm-12">
-    <a href="/Therapists">Therapists index</a>
+    <a href="/terapeutas">Terapeutas index</a>
 
     <div class="col-sm-12">
-        {!! Form::model($therapist, (array('method' => 'PATCH', 'route' => ['therapists.update', $therapist->id]))) !!}
+        {!! Form::model($therapist, (array('method' => 'PATCH', 'route' => ['terapeutas.update', $therapist->id]))) !!}
             @include ('therapists.form', ['submitButtonText' => 'Editar Terapeuta'])
         {!! Form::close() !!}
 

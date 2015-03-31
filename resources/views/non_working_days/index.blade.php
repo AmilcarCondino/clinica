@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h1> Lista de Supervisores </h1>
+            <h1> Dias de No Atencion </h1>
         </div>
     </div>
     <div class="row">
@@ -13,40 +13,49 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Telefono</th>
-                    <th>Celular</th>
-                    <th>Email</th>
+                    <th>Fecha</th>
+                    <th>Feriado</th>
+                    <th>Ateneo</th>
+                    <th>Curso</th>
+                    <th>Aclaracines</th>
+
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($supervisors as $supervisor)
+                @foreach($non_working_days as $non_working_day)
                 <tr>
                     <td>
-                        {{ $supervisor->name }}
+                        {{ $non_working_day->date }}
                     </td>
                     <td>
-                        {{ $supervisor->last_name }}
+                        @if($non_working_day->holiday === 1)
+                        Si
+                        @else
+                        No
+                        @endif
                     </td>
                     <td>
-                        {{ $supervisor->phone }}
+                        @if($non_working_day->ateneo === 1)
+                        Si
+                        @else
+                        No
+                        @endif
                     </td>
                     <td>
-                        {{ $supervisor->cell_phone }}
+                        {{ $non_working_day->course }}
                     </td>
                     <td>
-                        {{ $supervisor->email }}
+                        {{ $non_working_day->note }}
                     </td>
                     <td>
-                        {!! Form::open(['method' => 'get', 'route' => ['supervisores.edit', $supervisor->id]]) !!}
+                        {!! Form::open(['method' => 'get', 'route' => ['dias_no_laborales.edit', $non_working_day->id]]) !!}
 
                         {!! Form::submit('Editar', array('class'=>'btn btn-sm btn-primary')) !!}
 
                         {!! Form::close() !!}
                     </td>
                     <td>
-                        {!! Form::open(['method' => 'DELETE', 'route' => ['supervisores.destroy', $supervisor->id]]) !!}
+                        {!! Form::open(['method' => 'DELETE', 'route' => ['dias_no_laborales.destroy', $non_working_day->id]]) !!}
 
                         {!! Form::submit('Eliminar', array('class'=>'btn btn-sm btn-danger')) !!}
 
@@ -58,7 +67,7 @@
             </table>
 
 
-            <a href="/supervisores/create">Crear</a>
+            <a href="/dias_no_laborales/create">Crear</a>
         </div>
     </div>
     @stop

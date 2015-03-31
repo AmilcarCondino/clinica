@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h1> Lista de Supervisores </h1>
+            <h1> Lista de Therapists </h1>
         </div>
     </div>
     <div class="row">
@@ -13,40 +13,42 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Telefono</th>
-                    <th>Celular</th>
-                    <th>Email</th>
+                    <th>Terapeuta</th>
+                    <th>Fecha Inicio</th>
+                    <th>Fecha de Final</th>
+                    <th>Turno</th>
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($supervisors as $supervisor)
+                @foreach($therapist_guards as $therapist_guard)
                 <tr>
                     <td>
-                        {{ $supervisor->name }}
+                        {{ $therapist_guard->therapist_id }}
                     </td>
                     <td>
-                        {{ $supervisor->last_name }}
+                        {{ $therapist_guard->start_date }}
                     </td>
                     <td>
-                        {{ $supervisor->phone }}
+                        {{ $therapist_guard->end_date }}
                     </td>
                     <td>
-                        {{ $supervisor->cell_phone }}
+                        @if($therapist_guard->turn === 1)
+                            Tarde
+                        @else
+                            Mañana
+                        @endif
                     </td>
+
+
                     <td>
-                        {{ $supervisor->email }}
-                    </td>
-                    <td>
-                        {!! Form::open(['method' => 'get', 'route' => ['supervisores.edit', $supervisor->id]]) !!}
+                        {!! Form::open(['method' => 'get', 'route' => ['turnos_terapeutas.edit', $therapist_guard->id]]) !!}
 
                         {!! Form::submit('Editar', array('class'=>'btn btn-sm btn-primary')) !!}
 
                         {!! Form::close() !!}
                     </td>
                     <td>
-                        {!! Form::open(['method' => 'DELETE', 'route' => ['supervisores.destroy', $supervisor->id]]) !!}
+                        {!! Form::open(['method' => 'DELETE', 'route' => ['turnos_terapeutas.destroy', $therapist_guard->id]]) !!}
 
                         {!! Form::submit('Eliminar', array('class'=>'btn btn-sm btn-danger')) !!}
 
@@ -58,7 +60,7 @@
             </table>
 
 
-            <a href="/supervisores/create">Crear</a>
+            <a href="/turnos_terapeutas/create">Crear</a>
         </div>
     </div>
     @stop

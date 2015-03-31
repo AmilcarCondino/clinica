@@ -34,7 +34,7 @@
             {!! Form::submit($submitButtonText, ['class' => 'btn btn-sm-3 btn-success form-control']) !!}
         </div>
         <div class="col-sm-6">
-            <a class="btn btn-block btn-danger" href="/Therapists" role="button">Cancelar</a>
+            <a class="btn btn-block btn-danger" href="/terapeutas" role="button">Cancelar</a>
         </div>
     </div>
 </div>

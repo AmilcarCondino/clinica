@@ -4,12 +4,10 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Request;
+use App\TherapistGuard;
 use App\Therapist;
 
-
-class TherapistsController extends Controller {
-
-    protected $layout = 'layouts.header';
+class TherapistsGuardsController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -18,9 +16,10 @@ class TherapistsController extends Controller {
 	 */
 	public function index()
 	{
-        $therapists = Therapist::orderBy('last_name', 'ASC')->get();
+		//
+        $therapist_guards = TherapistGuard::orderBy('therapist_id', 'ASC')->get();
 
-		return view('therapists.index', compact('therapists'));
+        return view('therapist_guards.index', compact('therapist_guards'));
 	}
 
 	/**
@@ -31,8 +30,11 @@ class TherapistsController extends Controller {
 	public function create()
 	{
 		//
-        return view('therapists.create');
-	}
+        $therapists_id = Therapist::lists('last_name', 'id');
+
+        return view('therapist_guards.create', compact('therapists_id'));
+
+    }
 
 	/**
 	 * Store a newly created resource in storage.
@@ -43,13 +45,12 @@ class TherapistsController extends Controller {
 	{
 		//
 
+
         $input = Request::all();
 
-        Therapist::create($input);
+        TherapistGuard::create($input);
 
-        return redirect('terapeutas');
-
-
+        return redirect('turnos_terapeutas');
 	}
 
 	/**
@@ -61,6 +62,9 @@ class TherapistsController extends Controller {
 	public function show($id)
 	{
 		//
+        $therapist_guard = TherapistGuard::findOrFail($id);
+
+        return view('therapist_guards.edit', compact('therapist_guard'));
 	}
 
 	/**
@@ -72,9 +76,10 @@ class TherapistsController extends Controller {
 	public function edit($id)
 	{
 		//
-        $therapist = Therapist::findOrFail($id);
+        $therapist_guard = TherapistGuard::findOrFail($id);
 
-        return view('therapists.edit', compact('therapist'));
+        return view('therapist_guards.edit', compact('therapist_guard'));
+
 	}
 
 	/**
@@ -86,15 +91,12 @@ class TherapistsController extends Controller {
 	public function update($id, Request $request)
 	{
 		//
-
-
-        $therapist = Therapist::findOrFail($id);
+        $therapist_guard = TherapistGuard::findOrFail($id);
         $input = Request::all();
 
-        $therapist->update($input);
+        $therapist_guard->update($input);
 
-        return redirect('terapeutas');
-
+        return redirect('turnos_terapeutas');
 	}
 
 	/**
@@ -106,10 +108,10 @@ class TherapistsController extends Controller {
 	public function destroy($id)
 	{
 		//
-        $therapist = Therapist::findOrFail($id);
+        $therapist_guard = TherapistGuard::findOrFail($id);
 
-        if ($therapist->delete()) {
-            return redirect('terapeutas');
+        if ($therapist_guard->delete()) {
+            return redirect('turnos_terapeutas');
         }
 	}
 

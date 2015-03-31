@@ -6,11 +6,14 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'CreatePacientesTable' => $baseDir . '/database/migrations/2015_03_25_170755_create_pacientes_table.php',
+    'CreateNonWorkingDaysTable' => $baseDir . '/database/migrations/2015_03_30_200846_create_non_working_days_table.php',
+    'CreateOfficesTable' => $baseDir . '/database/migrations/2015_03_30_191102_create_offices_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
-    'CreateSupervisoresTable' => $baseDir . '/database/migrations/2015_03_26_013016_create_supervisores_table.php',
+    'CreatePatientsTable' => $baseDir . '/database/migrations/2015_03_30_141337_create_patients_table.php',
     'CreateSupervisorsTable' => $baseDir . '/database/migrations/2015_03_30_141654_create_supervisors_table.php',
-    'CreateTherapistsTable' => $baseDir . '/database/migrations/2015_03_21_175725_create_Therapists_table.php',
+    'CreateTherapistGuardsTable' => $baseDir . '/database/migrations/2015_03_31_161410_create_therapist_guards_table.php',
+    'CreateTherapistsTable' => $baseDir . '/database/migrations/2015_03_30_141027_create_therapists_table.php',
+    'CreateTurnsTable' => $baseDir . '/database/migrations/2015_03_30_195057_create_turns_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/File/Iterator.php',

@@ -16,4 +16,15 @@ class Therapist extends Model {
         'email'
     ];
 
+    /**
+     * A Therapist can have many Guards.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function guards()
+    {
+
+        return $this->hasMany('App\TherapistGuard');
+    }
+
 }

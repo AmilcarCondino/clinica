@@ -1,0 +1,27 @@
+<?php namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class TherapistGuard extends Model {
+
+	//
+    protected $fillable = [
+
+        'therapist_id',
+        'start_date',
+        'start_date',
+        'turn'
+    ];
+
+    /**
+     * A Guard its owned by a Therapist.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function therapist()
+    {
+
+        return $this->belongsTo('App\Therapist');
+    }
+
+}

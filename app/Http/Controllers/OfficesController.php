@@ -4,12 +4,9 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Request;
-use App\Therapist;
+use App\Office;
 
-
-class TherapistsController extends Controller {
-
-    protected $layout = 'layouts.header';
+class OfficesController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -18,9 +15,10 @@ class TherapistsController extends Controller {
 	 */
 	public function index()
 	{
-        $therapists = Therapist::orderBy('last_name', 'ASC')->get();
+		//
+        $offices = Office::orderBy('id', 'asc')->get();
 
-		return view('therapists.index', compact('therapists'));
+        return view('offices.index', compact('offices'));
 	}
 
 	/**
@@ -31,7 +29,7 @@ class TherapistsController extends Controller {
 	public function create()
 	{
 		//
-        return view('therapists.create');
+        return view('offices.create');
 	}
 
 	/**
@@ -42,14 +40,11 @@ class TherapistsController extends Controller {
 	public function store()
 	{
 		//
-
         $input = Request::all();
 
-        Therapist::create($input);
+        Office::create($input);
 
-        return redirect('terapeutas');
-
-
+        return redirect('offices/create');
 	}
 
 	/**
@@ -72,9 +67,6 @@ class TherapistsController extends Controller {
 	public function edit($id)
 	{
 		//
-        $therapist = Therapist::findOrFail($id);
-
-        return view('therapists.edit', compact('therapist'));
 	}
 
 	/**
@@ -83,18 +75,9 @@ class TherapistsController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id, Request $request)
+	public function update($id)
 	{
 		//
-
-
-        $therapist = Therapist::findOrFail($id);
-        $input = Request::all();
-
-        $therapist->update($input);
-
-        return redirect('terapeutas');
-
 	}
 
 	/**
@@ -106,11 +89,6 @@ class TherapistsController extends Controller {
 	public function destroy($id)
 	{
 		//
-        $therapist = Therapist::findOrFail($id);
-
-        if ($therapist->delete()) {
-            return redirect('terapeutas');
-        }
 	}
 
 }

@@ -10,7 +10,7 @@
     <a href="/supervisores">Supervisores index</a>
 
     <div class="col-sm-12">
-        {!! Form::model($supervisor,array('method' => 'PATCH', 'route' => ['supervisors.update', $supervisor->id])) !!}
+        {!! Form::model($supervisor,array('method' => 'PATCH', 'route' => ['supervisores.update', $supervisor->id])) !!}
             @include('supervisors.form', ['submitButtonText' => 'Editar Supervisor'])
         {!! Form::close() !!}
 

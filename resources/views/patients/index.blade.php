@@ -33,28 +33,28 @@
                 @foreach($patients as $patient)
                 <tr>
                     <td>
-                        {!! $patient->name !!}
+                        {{ $patient->name }}
                     </td>
                     <td>
-                        {!! $patient->last_name !!}
+                        {{ $patient->last_name }}
                     </td>
                     <td>
-                        {!! $patient->dni !!}
+                        {{ $patient->dni }}
                     </td>
                     <td>
-                        {!! $patient->phone !!}
+                        {{ $patient->phone }}
                     </td>
                     <td>
-                        {!! $patient->cell_phone !!}
+                        {{ $patient->cell_phone }}
                     </td>
                     <td>
-                        {!! $patient->address !!}
+                        {{ $patient->address }}
                     </td>
                     <td>
-                        {!! $patient->birth_date !!}
+                        {{ $patient->birth_date }}
                     </td>
                     <td>
-                        {!! $patient->send_for !!}
+                        {{ $patient->send_for }}
                     </td>
                     <td>
                         @if($patient->retired  === 1)
@@ -71,7 +71,7 @@
                         @endif
                     </td>
                     <td>
-                        {!! $patient->occupation !!}
+                        {{ $patient->occupation }}
                     </td>
                     <td>
                         @if($patient->masc_atten === 1)
@@ -97,14 +97,14 @@
 
 
                     <td>
-                        {!! Form::open(['method' => 'get', 'route' => ['patients.edit', $patient->id]]) !!}
+                        {!! Form::open(['method' => 'get', 'route' => ['pacientes.edit', $patient->id]]) !!}
 
                             {!! Form::submit('Editar', array('class'=>'btn btn-sm btn-primary')) !!}
 
                         {!! Form::close() !!}
                     </td>
                     <td>
-                        {!! Form::open(['method' => 'DELETE', 'route' => ['patients.destroy', $patient->id]]) !!}
+                        {!! Form::open(['method' => 'DELETE', 'route' => ['pacientes.destroy', $patient->id]]) !!}
 
                             {!! Form::submit('Eliminar', array('class'=>'btn btn-sm btn-danger')) !!}
 
@@ -116,7 +116,7 @@
             </table>
 
 
-            <a href="/patients/create">Crear</a>
+            <a href="/pacientes/create">Crear</a>
         </div>
     </div>
     @stop

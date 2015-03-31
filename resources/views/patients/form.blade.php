@@ -39,23 +39,23 @@
             </div>
             <div class="col-sm-6">
                 {!! Form::label('retired', 'Jubilado: ') !!}
-                {!! Form::select('retired', [ '0' => 'No', '1' => 'Si' ], '0') !!}
+                {!! Form::select('retired', [ '0' => 'No', '1' => 'Si' ], null) !!}
             </div>
             <div class="col-sm-6">
                 {!! Form::label('student', 'Estudiante: ') !!}
-                {!! Form::select('student', [ '0' => 'No', '1' => 'Si' ], '0') !!}
+                {!! Form::select('student', [ '0' => 'No', '1' => 'Si' ], null) !!}
             </div>
             <div class="col-sm-6">
                 {!! Form::label('masc_atten', 'Atencion Masculina: ') !!}
-                {!! Form::select('masc_atten', [ '0' => 'No', '1' => 'Si' ], '0') !!}
+                {!! Form::select('masc_atten', [ '0' => 'No', '1' => 'Si' ], null) !!}
             </div>
             <div class="col-sm-6">
                 {!! Form::label('fem_atten', 'Atencion Femenina: ') !!}
-                {!! Form::select('fem_atten', [ '0' => 'No', '1' => 'Si' ], '0') !!}
+                {!! Form::select('fem_atten', [ '0' => 'No', '1' => 'Si' ], null) !!}
             </div>
             <div class="col-sm-6">
                 {!! Form::label('pb_atten', 'Atencion Pb: ') !!}
-                {!! Form::select('pb_atten', [ '0' => 'No', '1' => 'Si' ], '0') !!}
+                {!! Form::select('pb_atten', [ '0' => 'No', '1' => 'Si' ], null) !!}
             </div>
         </div>
         <div class="col-sm-6">

@@ -4,12 +4,9 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Request;
-use App\Therapist;
+use App\NonWorkingDays;
 
-
-class TherapistsController extends Controller {
-
-    protected $layout = 'layouts.header';
+class NonWorkingDaysController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -18,9 +15,11 @@ class TherapistsController extends Controller {
 	 */
 	public function index()
 	{
-        $therapists = Therapist::orderBy('last_name', 'ASC')->get();
+		//
+        $non_working_days = NonWorkingDays::orderBy('date', 'ASC')->get();
 
-		return view('therapists.index', compact('therapists'));
+        return view('non_working_days.index', compact('non_working_days'));
+
 	}
 
 	/**
@@ -31,7 +30,7 @@ class TherapistsController extends Controller {
 	public function create()
 	{
 		//
-        return view('therapists.create');
+        return view('non_working_days.create');
 	}
 
 	/**
@@ -42,14 +41,11 @@ class TherapistsController extends Controller {
 	public function store()
 	{
 		//
-
         $input = Request::all();
 
-        Therapist::create($input);
+        NonWorkingDays::create($input);
 
-        return redirect('terapeutas');
-
-
+        return redirect('dias_no_laborales');
 	}
 
 	/**
@@ -72,9 +68,9 @@ class TherapistsController extends Controller {
 	public function edit($id)
 	{
 		//
-        $therapist = Therapist::findOrFail($id);
+        $non_working_day = NonWorkingDays::findOrFail($id);
 
-        return view('therapists.edit', compact('therapist'));
+        return view('non_working_days.edit', compact('non_working_day'));
 	}
 
 	/**
@@ -86,15 +82,12 @@ class TherapistsController extends Controller {
 	public function update($id, Request $request)
 	{
 		//
-
-
-        $therapist = Therapist::findOrFail($id);
+        $non_working_day = NonWorkingDays::findOrFail($id);
         $input = Request::all();
 
-        $therapist->update($input);
+        $non_working_day->update($input);
 
-        return redirect('terapeutas');
-
+        return redirect('dias_no_laborales');
 	}
 
 	/**
@@ -106,10 +99,10 @@ class TherapistsController extends Controller {
 	public function destroy($id)
 	{
 		//
-        $therapist = Therapist::findOrFail($id);
+        $non_working_day = NonWorkingDays::findOrFail($id);
 
-        if ($therapist->delete()) {
-            return redirect('terapeutas');
+        if ($non_working_day->delete()) {
+            return redirect('dias_no_laborales');
         }
 	}
 

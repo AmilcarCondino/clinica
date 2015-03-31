@@ -45,7 +45,7 @@ class PatientsController extends Controller {
 
         Patient::create($input);
 
-        return redirect('patients');
+        return redirect('pacientes');
 
 	}
 
@@ -87,8 +87,7 @@ class PatientsController extends Controller {
 
         $patient->update($input);
 
-        return redirect('patients');
-
+        return redirect('pacientes');
 	}
 
 	/**
@@ -103,7 +102,7 @@ class PatientsController extends Controller {
         $patient = Patient::findOrFail($id);
 
         if ($patient->delete()) {
-            return redirect('patients');
+            return redirect('pacientes');
         }
 	}
 
