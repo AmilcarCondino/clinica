@@ -2999,5 +2999,41 @@
                 "email": "taylorotwell@gmail.com"
             }
         ]
+    },
+    {
+        "name": "maddhatter/laravel-fullcalendar",
+        "version": "v1.1.1",
+        "version_normalized": "1.1.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/maddhatter/laravel-fullcalendar.git",
+            "reference": "516e8675ce5869671af15b4c56737eead1c5007a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/maddhatter/laravel-fullcalendar/zipball/516e8675ce5869671af15b4c56737eead1c5007a",
+            "reference": "516e8675ce5869671af15b4c56737eead1c5007a",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": "~5.0",
+            "php": ">=5.4.0"
+        },
+        "time": "2015-03-16 18:11:33",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "MaddHatter\\LaravelFullcalendar": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "Shawn Tunney",
+                "email": "shawn.tunney@gmail.com"
+            }
+        ],
+        "description": "Laravel helper for FullCalendar.io"
     }
 ]

@@ -138,7 +138,7 @@ return [
 
         'Laracasts\Generators\GeneratorsServiceProvider',
         'Illuminate\Html\HtmlServiceProvider',
-
+        'MaddHatter\LaravelFullcalendar\ServiceProvider',
 
 		/*
 		 * Application Service Providers...
@@ -198,6 +198,7 @@ return [
 		'View'      => 'Illuminate\Support\Facades\View',
 
         'Form'      => 'Illuminate\Html\FormFacade',
+        'Calendar' => 'MaddHatter\LaravelFullcalendar\Facades\Calendar',
 
 	],
 

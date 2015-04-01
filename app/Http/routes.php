@@ -26,3 +26,5 @@ Route::resource('supervisores', 'SupervisorsController');
 Route::resource('consultorios', 'OfficesController');
 Route::resource('dias_no_laborales', 'NonWorkingDaysController');
 Route::resource('turnos_terapeutas', 'TherapistsGuardsController');
+
+Route::get('calendario', 'CalendarsController@index');
