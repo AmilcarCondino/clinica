@@ -17,13 +17,19 @@
                     <th>Fecha Inicio</th>
                     <th>Fecha de Final</th>
                     <th>Turno</th>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miercoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+
                 </tr>
                 </thead>
                 <tbody>
                 @foreach($therapist_guards as $therapist_guard)
                 <tr>
                     <td>
-                        {{ $therapist_guard->therapist_id }}
+                        {{ $therapist_guard->therapist->name}}
                     </td>
                     <td>
                         {{ $therapist_guard->start_date }}
@@ -36,6 +42,31 @@
                             Tarde
                         @else
                             Mañana
+                        @endif
+                    </td>
+                    <td>
+                        @if($therapist_guard->monday === 1)
+                        Si
+                        @endif
+                    </td>
+                    <td>
+                        @if($therapist_guard->tuesday === 1)
+                        Si
+                        @endif
+                    </td>
+                    <td>
+                        @if($therapist_guard->wednesday === 1)
+                        Si
+                        @endif
+                    </td>
+                    <td>
+                        @if($therapist_guard->thursday === 1)
+                        Si
+                        @endif
+                    </td>
+                    <td>
+                        @if($therapist_guard->friday === 1)
+                        Si
                         @endif
                     </td>
 

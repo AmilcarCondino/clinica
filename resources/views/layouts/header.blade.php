@@ -13,7 +13,7 @@
         <script src="/js/bootstrap.min.js"></script>
     </head>
     <body>
-
+    <a href="/home"><h3>Home</h3></a></li>
     @yield('content')
 
 

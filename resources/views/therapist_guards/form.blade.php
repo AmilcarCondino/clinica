@@ -2,8 +2,8 @@
     <div class="col-sm-12">
         <div class="row">
             <div class="col-sm-6">
-                {!! Form::label('therapists_id', 'Terapeuta: ') !!}
-                {!! Form::select('therapists_id', $therapists_id, null, ['class' => 'form-control']) !!}
+                {!! Form::label('therapist_id', 'Terapeuta: ') !!}
+                {!! Form::select('therapist_id', $therapists_id, null, ['class' => 'form-control']) !!}
             </div>
             <div class="col-sm-6">
                 {!! Form::label('turn', 'Turno: ') !!}
@@ -16,6 +16,18 @@
             <div class="col-sm-6">
                 {!! Form::label('end_date', 'Fecha de Finlazacion: ') !!}
                 {!! Form::input('date', 'end_date', date('Y-m-d'), ['class' => 'form-control']) !!}
+            </div>
+            <div class="col-sm-6">
+                {!! Form::label('monday', 'Lunes: ') !!}
+                {!! Form::select('monday', [ '0' => 'No', '1' => 'Si' ], null) !!}
+                {!! Form::label('tuesday', 'Martes: ') !!}
+                {!! Form::select('tuesday', [ '0' => 'No', '1' => 'Si' ], null) !!}
+                {!! Form::label('wednesday', 'Miercoles: ') !!}
+                {!! Form::select('wednesday', [ '0' => 'No', '1' => 'Si' ], null) !!}
+                {!! Form::label('thursday', 'Jueves: ') !!}
+                {!! Form::select('thursday', [ '0' => 'No', '1' => 'Si' ], null) !!}
+                {!! Form::label('friday', 'Viernes: ') !!}
+                {!! Form::select('friday', [ '0' => 'No', '1' => 'Si' ], null) !!}
             </div>
         </div>
         <div class="col-sm-6">

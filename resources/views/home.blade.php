@@ -1,17 +1,17 @@
-@extends('app')
+@extends('layouts/header')
 
 @section('content')
-<div class="container">
-	<div class="row">
-		<div class="col-md-10 col-md-offset-1">
-			<div class="panel panel-default">
-				<div class="panel-heading">Home</div>
 
-				<div class="panel-body">
-					You are logged in!
-				</div>
-			</div>
-		</div>
-	</div>
+<div class="container">
+
+    <ul><h1>Mapa del sitio</h1>
+        <li><a href="/terapeutas">Terapeutas</a></li>
+        <li><a href="/pacientes">Pacientes</a></li>
+        <li><a href="/supervisores">Supervisores</a></li>
+        <li><a href="/dias_no_laborales">Anulaciond de dias</a></li>
+        <li><a href="/turnos_terapeutas">Configuracion de Guardias</a></li>
+    </ul>
+
+
 </div>
-@endsection
+    @stop

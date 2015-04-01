@@ -19,7 +19,7 @@ class TherapistsGuardsController extends Controller {
 		//
         $therapist_guards = TherapistGuard::orderBy('therapist_id', 'ASC')->get();
 
-        return view('therapist_guards.index', compact('therapist_guards'));
+        return view('therapist_guards.index', compact('therapist_guards', 'thera'));
 	}
 
 	/**
@@ -47,7 +47,6 @@ class TherapistsGuardsController extends Controller {
 
 
         $input = Request::all();
-
         TherapistGuard::create($input);
 
         return redirect('turnos_terapeutas');
@@ -77,8 +76,10 @@ class TherapistsGuardsController extends Controller {
 	{
 		//
         $therapist_guard = TherapistGuard::findOrFail($id);
+        $therapists_id = Therapist::lists('last_name', 'id');
 
-        return view('therapist_guards.edit', compact('therapist_guard'));
+
+        return view('therapist_guards.edit', compact('therapist_guard', 'therapists_id'));
 
 	}
 

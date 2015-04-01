@@ -9,7 +9,12 @@ class TherapistGuard extends Model {
 
         'therapist_id',
         'start_date',
-        'start_date',
+        'end_date',
+        'monday',
+        'tuesday',
+        'wednesday',
+        'thursday',
+        'friday',
         'turn'
     ];
 

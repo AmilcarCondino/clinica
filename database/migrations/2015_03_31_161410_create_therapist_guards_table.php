@@ -19,6 +19,11 @@ class CreateTherapistGuardsTable extends Migration {
             $table->date('end_date');
             $table->boolean('turn');
             $table->timestamps();
+            $table->boolean('monday');
+            $table->boolean('tuesday');
+            $table->boolean('wednesday');
+            $table->boolean('thursday');
+            $table->boolean('friday');
 
             $table->foreign('therapist_id')
                 ->references('id')
