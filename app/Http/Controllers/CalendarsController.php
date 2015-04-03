@@ -12,7 +12,7 @@ use App\Patient;
 use App\Supervisor;
 use App\Therapist;
 use App\TherapistGuard;
-
+use Jenssegers\Date\Date;
 
 
 class CalendarsController extends Controller {
@@ -20,61 +20,135 @@ class CalendarsController extends Controller {
     public function index()
     {
 
-        $today = Carbon::today();
-        $first_date = $today->addWeekdays(-15);
-        $end_date = $today->addWeekdays(15);
+        $first_date = Carbon::today()->startOfMonth()->subWeek();
+        $last_date = Carbon::today()->endOfMonth()->addWeek();
 
+        $therapists = Therapist::all();
+        $therapist_guards = TherapistGuard::all();
 
-        $list_days = [];
+        $turns = [];
 
-        while ($today <= $end_date) {
+        foreach ($therapist_guards as $therapist_guard)
+        {
+            $start_date = Carbon::parse($therapist_guard->start_date);
+            $end_date = Carbon::parse($therapist_guard->end_date);
 
-            $list_days = $today;
+            $key = $therapist_guard->therapist->name;
 
-            $today = $today->addDay();
-
+            $days_list = [];
+            while ($start_date <= $end_date)
+            {
+                $start_date = $start_date->addDay();
+                $days_list[] = $start_date->copy();
             }
 
+            $liable_turn = [];
+            foreach ($days_list as $day)
+            {
+                if (in_array($day, $this->showingDays()))
+                {
+                    $liable_turn[] = $day;
+                }
+            }
 
-        if ($today->dayOfWeek == Carbon::MONDAY) {
-            $day = 'Lunes';
-        }
-        if ($today->dayOfWeek == Carbon::THURSDAY) {
-            $day = 'Jueves';
-        }
-        if ($today->dayOfWeek == Carbon::WEDNESDAY) {
-            $day = 'Miercoles';
-        }
-        if ($today->dayOfWeek == Carbon::TUESDAY) {
-            $day = 'Martes';
-        }
-        if ($today->dayOfWeek == Carbon::FRIDAY) {
-            $day = 'Viernes';
-        }
-        if ($today->dayOfWeek == Carbon::SATURDAY) {
-            $day = 'Sabado';
-        }
-        if ($today->dayOfWeek == Carbon::SUNDAY) {
-            $day = 'Domingo';
+            $turns[$key] =  $liable_turn;
+
         }
 
 
-dd($list_days);
 
-        return view('calendars.index', compact('date', 'day', 'today', 'end_date'));
+
+
+        return view('calendars.index', compact('therapists', 'turns'));
 
     }
 
-    public function laborable_days()
+    /**
+     *
+     * Generate a list of days starting one week
+     * before and ending ona week after the
+     * actual date
+     *
+     * @return mixed
+     */
+    public function showingDays()
     {
-        //Quiero generar un listado de 15 dias anteriores y 15 dias
-        //posteriores labrables a la fecha actual.
+
+        //@TODO not hardcod the first and end dates. Check the first date.
+
+        $first_date = Carbon::today()->startOfMonth()->subWeek();
+        $end_date = Carbon::today()->endOfMonth()->addWeek();
+        $showingDays = [];
+
+
+        while ($first_date <= $end_date)
+        {
+            $first_date = $first_date->addDay();
+            $showingDays[] = $first_date->copy();
+        }
 
 
 
-        return $show_working_days;
+        return $showingDays;
     }
 
+    /**
+     * Create a list of non working days, merging
+     * weekends and holidays.
+     *
+     * @return array
+     */
+    public function nonWorkingDays ()
+    {
+        //@TODO not hardcod the first and end dates. Check the first date.
+
+        //Determine the range dates to analise
+        $first_date = Carbon::today()->startOfMonth()->subWeek();
+        $end_date = Carbon::today()->endOfMonth()->addWeek();
+
+        //Make a list of the weekends in the given range
+        $days_list = [];
+        while ($first_date <= $end_date)
+        {
+            $first_date = $first_date->addDay();
+
+            if ( $first_date->isWeekend() )
+            {
+                $days_list[] = $first_date->copy();
+            }
+
+        }
+
+        //Sum a list of holidays to the list.
+
+        $first = Carbon::today()->startOfMonth()->subWeek();
+        $end = Carbon::today()->endOfMonth()->addWeek();
+        $non_working_days = NonWorkingDays::whereBetween('date', [$first, $end])->get();
+        foreach ($non_working_days as $non_working_day)
+        {
+            if ($non_working_day->holiday == 1)
+            {
+                $days_list[] = Carbon::parse($non_working_day->date);
+            }
+        }
+
+        return $days_list;
+
+    }
+
+    public function avialableTurns ()
+    {
+
+        //Determine the range dates to analise
+        $first_date = Carbon::today()->startOfMonth()->subWeek();
+        $end_date = Carbon::today()->endOfMonth()->addWeek();
+
+        $therapists = Therapist::all();
+
+
+
+
+    }
 
 
 }

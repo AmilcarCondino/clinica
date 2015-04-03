@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "535002414033495b0d21cc9e747225bf",
+    "hash": "2370354639b293d83b53f7deeeb60ab9",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -395,6 +395,54 @@
                 }
             ],
             "time": "2014-07-14 20:59:35"
+        },
+        {
+            "name": "jenssegers/date",
+            "version": "v2.0.21",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jenssegers/laravel-date.git",
+                "reference": "485208fc2c085be0449b9fb46abcf116d80daad2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jenssegers/laravel-date/zipball/485208fc2c085be0449b9fb46abcf116d80daad2",
+                "reference": "485208fc2c085be0449b9fb46abcf116d80daad2",
+                "shasum": ""
+            },
+            "require": {
+                "nesbot/carbon": "~1.0,<1.18",
+                "php": ">=5.3.0",
+                "symfony/translation": "~2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0",
+                "satooshi/php-coveralls": "~0.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Jenssegers\\Date": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jens Segers",
+                    "homepage": "http://jenssegers.be"
+                }
+            ],
+            "description": "A date library to help you work with dates",
+            "keywords": [
+                "date",
+                "datetime",
+                "laravel",
+                "time"
+            ],
+            "time": "2015-03-26 22:43:43"
         },
         {
             "name": "jeremeamia/SuperClosure",
