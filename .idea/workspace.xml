@@ -26,7 +26,7 @@
       <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/turns/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="19" selection-start="174" selection-end="174" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="1860">
+            <state line="20" column="31" selection-start="472" selection-end="472" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="1860">
               <folding />
             </state>
           </provider>
@@ -35,7 +35,7 @@
       <file leaf-file-name="TurnsController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TurnsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="302" column="70" selection-start="7251" selection-end="7251" vertical-scroll-proportion="0.63736266" vertical-offset="3950" max-vertical-offset="4860">
+            <state line="276" column="40" selection-start="6302" selection-end="6302" vertical-scroll-proportion="1.4495614" vertical-offset="2818" max-vertical-offset="5055">
               <folding>
                 <element signature="e#39#61#0" expanded="true" />
               </folding>
@@ -427,11 +427,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6894619" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -655,9 +655,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TherapistsGuardsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="59" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.20879121" vertical-offset="890" max-vertical-offset="1800">
-          <folding />
-        </state>
+        <state line="77" column="59" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.20879121" vertical-offset="890" max-vertical-offset="1800" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Calendar.php">
@@ -676,74 +674,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OfficesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="28" selection-start="361" selection-end="368" vertical-scroll-proportion="0.26373628" vertical-offset="0" max-vertical-offset="1440">
-          <folding />
-        </state>
+        <state line="20" column="28" selection-start="361" selection-end="368" vertical-scroll-proportion="0.26373628" vertical-offset="0" max-vertical-offset="1440" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SupervisorsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="4" selection-start="43" selection-end="43" vertical-scroll-proportion="0.032967035" vertical-offset="0" max-vertical-offset="1725">
-          <folding>
-            <element signature="e#39#61#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="2" column="4" selection-start="43" selection-end="43" vertical-scroll-proportion="0.032967035" vertical-offset="0" max-vertical-offset="1725" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PatientsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="4" selection-start="43" selection-end="43" vertical-scroll-proportion="0.032967035" vertical-offset="0" max-vertical-offset="1665">
-          <folding />
-        </state>
+        <state line="2" column="4" selection-start="43" selection-end="43" vertical-scroll-proportion="0.032967035" vertical-offset="0" max-vertical-offset="1665" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/calendars/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="10" selection-start="372" selection-end="372" vertical-scroll-proportion="0.26373628" vertical-offset="0" max-vertical-offset="1740">
-          <folding />
-        </state>
+        <state line="16" column="10" selection-start="372" selection-end="372" vertical-scroll-proportion="0.26373628" vertical-offset="0" max-vertical-offset="1740" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="32" selection-start="972" selection-end="972" vertical-scroll-proportion="0.32967034" vertical-offset="0" max-vertical-offset="910">
-          <folding />
-        </state>
+        <state line="29" column="32" selection-start="972" selection-end="972" vertical-scroll-proportion="0.32967034" vertical-offset="0" max-vertical-offset="910" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CalendarsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="0" selection-start="2779" selection-end="2819" vertical-scroll-proportion="0.60659343" vertical-offset="1173" max-vertical-offset="2460">
-          <folding>
-            <element signature="e#39#61#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="115" column="0" selection-start="2779" selection-end="2819" vertical-scroll-proportion="0.60659343" vertical-offset="1173" max-vertical-offset="2460" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/therapist_guards/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="30" selection-start="2517" selection-end="2517" vertical-scroll-proportion="0.84615386" vertical-offset="415" max-vertical-offset="1680">
-          <folding />
-        </state>
+        <state line="79" column="30" selection-start="2517" selection-end="2517" vertical-scroll-proportion="0.84615386" vertical-offset="415" max-vertical-offset="1680" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/therapist_guards/form.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="60" selection-start="1681" selection-end="1681" vertical-scroll-proportion="0.47802198" vertical-offset="0" max-vertical-offset="910">
-          <folding />
-        </state>
+        <state line="29" column="60" selection-start="1681" selection-end="1681" vertical-scroll-proportion="0.47802198" vertical-offset="0" max-vertical-offset="910" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/turns/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="19" selection-start="174" selection-end="174" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="1860">
+        <state line="20" column="31" selection-start="472" selection-end="472" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="1860">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TurnsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="302" column="70" selection-start="7251" selection-end="7251" vertical-scroll-proportion="0.63736266" vertical-offset="3950" max-vertical-offset="4860">
+        <state line="276" column="40" selection-start="6302" selection-end="6302" vertical-scroll-proportion="1.4495614" vertical-offset="2818" max-vertical-offset="5055">
           <folding>
             <element signature="e#39#61#0" expanded="true" />
           </folding>

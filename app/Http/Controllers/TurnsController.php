@@ -34,9 +34,9 @@ class TurnsController extends Controller {
         $turns = $this->liableTurns();
         $therapists = Therapist::all();
 
-        $turn = $this->therapistGuards(4);
+        $turn = $this->liableTurns();
 
-
+dd($this->liableTurns());
         return view('turns.index', compact('therapists', 'turns', 'therapist_guards', 'turn'));
 
     }
@@ -189,6 +189,9 @@ class TurnsController extends Controller {
     public function liableTurns ()
     {
 
+        //@TODO make a god method of date range analise selection.
+        //@TODO substract alllready taken turns.
+
         //Determine the range dates to analise
         $first_date = Carbon::today()->startOfMonth()->subWeek();
         $end_date = Carbon::today()->endOfMonth()->addWeek();
@@ -226,7 +229,7 @@ class TurnsController extends Controller {
                 }
             }
 
-            $turns[$key] =  $liable_turn;
+            $turns[] =  $liable_turn;
 
         }
 
@@ -235,9 +238,19 @@ class TurnsController extends Controller {
 
     }
 
+    /**
+     *
+     * Create a list of dates where a specific therapist have an
+     * open turn.
+     *
+     *
+     * @param $therapist
+     * @return array
+     */
     public function therapistGuards ($therapist)
     {
         //@TODO make a god method of date range analise selection.
+        //@TODO substract alllready taken turns.
 
         //Determine the range dates to analise
         $start_date = Carbon::today();
@@ -257,7 +270,7 @@ class TurnsController extends Controller {
 
             $key = $therapist_guard->therapist->name;
 
-            //List of gards Week Days--------------->
+            //List of guards Week Days--------------->
             $guards_week_days = [];
             if ($therapist_guard->monday == 1)
             {
@@ -279,7 +292,7 @@ class TurnsController extends Controller {
             {
                 $guards_week_days[] = 5;
             }
-            //<-----------------List of gards Week Days
+            //<-----------------List of guards Week Days
 
             //List of analise dates
             $days_list = [];

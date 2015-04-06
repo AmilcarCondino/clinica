@@ -18,7 +18,7 @@
         <?php $name = key($turn); ?>
         {{ $name }}
         <ol>
-            @foreach ($turn as $key => $day)
+            @foreach ($turn as $day)
             <li>{{ $day }}</li>
             @endforeach
         </ol>
