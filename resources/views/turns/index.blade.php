@@ -3,20 +3,12 @@
 @section('content')
 <h1>Testing Turns Index View</h1>
 
-<div class="row">
-    <div class="col-sm-3">
-        <h3>tera test</h3>
-        @foreach ($turn as $ther)
-            <li>{{ $ther }}</li>
-        @endforeach
-    </div>
-</div>
+
 <dvi class = "row">
     <h3>turnos test</h3>
     @foreach ($turns as $key => $turn)
     <div class="col-sm-3">
-        <?php $name = key($turn); ?>
-        {{ $name }}
+        {{ $key }}
         <ol>
             @foreach ($turn as $day)
             <li>{{ $day }}</li>

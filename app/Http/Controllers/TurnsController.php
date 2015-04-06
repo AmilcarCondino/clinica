@@ -36,7 +36,11 @@ class TurnsController extends Controller {
 
         $turn = $this->liableTurns();
 
-dd($this->liableTurns());
+        $therapists_id = 3;
+
+        $therapist_guards = TherapistGuard::where('therapist_id', $therapists_id)->get();
+
+
         return view('turns.index', compact('therapists', 'turns', 'therapist_guards', 'turn'));
 
     }
@@ -211,7 +215,33 @@ dd($this->liableTurns());
                 $start_date = Carbon::parse($therapist_guard->start_date);
                 $end_date = Carbon::parse($therapist_guard->end_date);
 
-                $key = $therapist_guard->therapist_id;
+                $key = $therapist_guard->therapist->name;
+
+
+                //List of guards Week Days--------------->
+                $guards_week_days = [];
+                if ($therapist_guard->monday == 1)
+                {
+                    $guards_week_days[] = 1;
+                }
+                if ($therapist_guard->tuesday == 2)
+                {
+                    $guards_week_days[] = 2;
+                }
+                if ($therapist_guard->wednesday == 3)
+                {
+                    $guards_week_days[] = 3;
+                }
+                if ($therapist_guard->thursday == 4)
+                {
+                    $guards_week_days[] = 4;
+                }
+                if ($therapist_guard->friday == 5)
+                {
+                    $guards_week_days[] = 5;
+                }
+                //<-----------------List of guards Week Days
+
 
                 $days_list = [];
                 while ($start_date <= $end_date)
@@ -225,111 +255,19 @@ dd($this->liableTurns());
                 {
                     if (in_array($day, $this->showingDays()))
                     {
-                        if (!in_array($day, $this->nonWorkingDays()))
+                        if (in_array($day->dayOfWeek, $guards_week_days))
                         {
-                            $liable_turn[] = $day;
+                            if (!in_array($day, $this->nonWorkingDays()))
+                            {
+                                $liable_turn[] = $day;
+                            }
                         }
                     }
                 }
-
                 $turns[$key] =  $liable_turn;
-
-            }
-        }
-
-        return $liable_turn;
-
-
-    }
-
-    /**
-     *
-     * Create a list of dates where a specific therapist have an
-     * open turn.
-     *
-     *
-     * @param $therapist
-     * @return array
-     */
-    public function therapistGuards ($therapist)
-    {
-        //@TODO make a god method of date range analise selection.
-        //@TODO substract alllready taken turns.
-
-        //Determine the range dates to analise
-        $start_date = Carbon::today();
-        $end_date = Carbon::today()->endOfMonth()->addWeek();
-
-        //Instantiate the needed object
-
-        $therapist_guards = TherapistGuard::where('therapist_id', $therapist)->get();
-
-        //Create an empty array to populate
-        $turns = [];
-
-        foreach ($therapist_guards as $therapist_guard)
-        {
-            $therapist_start_guard_date = Carbon::parse($therapist_guard->start_date);
-            $therapist_end_guard_date = Carbon::parse($therapist_guard->end_date);
-
-            $key = $therapist_guard->therapist->name;
-
-            //List of guards Week Days--------------->
-            $guards_week_days = [];
-            if ($therapist_guard->monday == 1)
-            {
-                $guards_week_days[] = 1;
-            }
-            if ($therapist_guard->tuesday == 2)
-            {
-                $guards_week_days[] = 2;
-            }
-            if ($therapist_guard->wednesday == 3)
-            {
-                $guards_week_days[] = 3;
-            }
-            if ($therapist_guard->thursday == 4)
-            {
-                $guards_week_days[] = 4;
-            }
-            if ($therapist_guard->friday == 5)
-            {
-                $guards_week_days[] = 5;
-            }
-            //<-----------------List of guards Week Days
-
-            //List of analise dates
-            $days_list = [];
-            while ($start_date <= $end_date)
-            {
-                $start_date = $start_date->addDay();
-                $days_list[] = $start_date->copy();
-            }
-
-
-
-
-            //List of therapist guards dates
-            while ($therapist_start_guard_date <= $therapist_end_guard_date)
-            {
-                $therapist_start_guard_date = $therapist_start_guard_date->addDay();
-                if (in_array($therapist_start_guard_date->dayOfWeek, $guards_week_days))
-                {
-                    if (!in_array($therapist_start_guard_date, $this->nonWorkingDays()))
-                    {
-                        $turns[] = $therapist_start_guard_date->copy();
-                    }
-                }
             }
         }
 
         return $turns;
-
-
-
-
-
-
     }
-
 }
