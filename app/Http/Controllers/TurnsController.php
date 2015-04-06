@@ -198,39 +198,43 @@ dd($this->liableTurns());
 
         //Instantiate the needed object
         $therapists = Therapist::all();
-        $therapist_guards = TherapistGuard::all();
 
         //Create an empty array to populate
         $turns = [];
 
-        foreach ($therapist_guards as $therapist_guard)
+        foreach ($therapists as $therapist)
         {
-            $start_date = Carbon::parse($therapist_guard->start_date);
-            $end_date = Carbon::parse($therapist_guard->end_date);
+            $therapist_guards = TherapistGuard::where('therapist_id', $therapist->id)->get();
 
-            $key = $therapist_guard->therapist->name;
-
-            $days_list = [];
-            while ($start_date <= $end_date)
+            foreach ($therapist_guards as $therapist_guard)
             {
-                $start_date = $start_date->addDay();
-                $days_list[] = $start_date->copy();
-            }
+                $start_date = Carbon::parse($therapist_guard->start_date);
+                $end_date = Carbon::parse($therapist_guard->end_date);
 
-            $liable_turn = [];
-            foreach ($days_list as $day)
-            {
-                if (in_array($day, $this->showingDays()))
+                $key = $therapist_guard->therapist_id;
+
+                $days_list = [];
+                while ($start_date <= $end_date)
                 {
-                    if (!in_array($day, $this->nonWorkingDays()))
+                    $start_date = $start_date->addDay();
+                    $days_list[] = $start_date->copy();
+                }
+
+                $liable_turn = [];
+                foreach ($days_list as $day)
+                {
+                    if (in_array($day, $this->showingDays()))
                     {
-                        $liable_turn[] = $day;
+                        if (!in_array($day, $this->nonWorkingDays()))
+                        {
+                            $liable_turn[] = $day;
+                        }
                     }
                 }
+
+                $turns[$key] =  $liable_turn;
+
             }
-
-            $turns[] =  $liable_turn;
-
         }
 
         return $liable_turn;

@@ -35,7 +35,7 @@
       <file leaf-file-name="TurnsController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TurnsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="276" column="40" selection-start="6302" selection-end="6302" vertical-scroll-proportion="1.4495614" vertical-offset="2818" max-vertical-offset="5055">
+            <state line="218" column="56" selection-start="4760" selection-end="4760" vertical-scroll-proportion="0.6" vertical-offset="2724" max-vertical-offset="5115">
               <folding>
                 <element signature="e#39#61#0" expanded="true" />
               </folding>
@@ -721,7 +721,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TurnsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="276" column="40" selection-start="6302" selection-end="6302" vertical-scroll-proportion="1.4495614" vertical-offset="2818" max-vertical-offset="5055">
+        <state line="218" column="56" selection-start="4760" selection-end="4760" vertical-scroll-proportion="0.6" vertical-offset="2724" max-vertical-offset="5115">
           <folding>
             <element signature="e#39#61#0" expanded="true" />
           </folding>
