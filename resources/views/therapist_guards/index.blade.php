@@ -45,28 +45,38 @@
                         @endif
                     </td>
                     <td>
-                        @if($therapist_guard->monday === 1)
-                        Si
+                        @if($therapist_guard->monday === 0)
+                        No
+                        @else
+                        SI
                         @endif
                     </td>
                     <td>
-                        @if($therapist_guard->tuesday === 1)
-                        Si
+                        @if($therapist_guard->tuesday === 0)
+                        No
+                        @else
+                        SI
                         @endif
                     </td>
                     <td>
-                        @if($therapist_guard->wednesday === 1)
-                        Si
+                        @if($therapist_guard->wednesday === 0)
+                        No
+                        @else
+                        SI
                         @endif
                     </td>
                     <td>
-                        @if($therapist_guard->thursday === 1)
-                        Si
+                        @if($therapist_guard->thursday === 0)
+                        No
+                        @else
+                        SI
                         @endif
                     </td>
                     <td>
-                        @if($therapist_guard->friday === 1)
-                        Si
+                        @if($therapist_guard->friday === 0)
+                        No
+                        @else
+                        SI
                         @endif
                     </td>
 

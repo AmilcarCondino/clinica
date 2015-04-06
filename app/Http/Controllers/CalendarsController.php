@@ -23,39 +23,8 @@ class CalendarsController extends Controller {
         $first_date = Carbon::today()->startOfMonth()->subWeek();
         $last_date = Carbon::today()->endOfMonth()->addWeek();
 
-        $therapists = Therapist::all();
-        $therapist_guards = TherapistGuard::all();
 
-        $turns = [];
-
-        foreach ($therapist_guards as $therapist_guard)
-        {
-            $start_date = Carbon::parse($therapist_guard->start_date);
-            $end_date = Carbon::parse($therapist_guard->end_date);
-
-            $key = $therapist_guard->therapist->name;
-
-            $days_list = [];
-            while ($start_date <= $end_date)
-            {
-                $start_date = $start_date->addDay();
-                $days_list[] = $start_date->copy();
-            }
-
-            $liable_turn = [];
-            foreach ($days_list as $day)
-            {
-                if (in_array($day, $this->showingDays()))
-                {
-                    $liable_turn[] = $day;
-                }
-            }
-
-            $turns[$key] =  $liable_turn;
-
-        }
-
-
+        $turns = $this->liableTurns();
 
 
 
@@ -136,16 +105,51 @@ class CalendarsController extends Controller {
 
     }
 
-    public function avialableTurns ()
+    public function liableTurns ()
     {
 
         //Determine the range dates to analise
         $first_date = Carbon::today()->startOfMonth()->subWeek();
         $end_date = Carbon::today()->endOfMonth()->addWeek();
 
+        //Instantiate the needed object
         $therapists = Therapist::all();
+        $therapist_guards = TherapistGuard::all();
 
+        //Create an empty array to populate
+        $turns = [];
 
+        foreach ($therapist_guards as $therapist_guard)
+        {
+            $start_date = Carbon::parse($therapist_guard->start_date);
+            $end_date = Carbon::parse($therapist_guard->end_date);
+
+            $key = $therapist_guard->therapist->name;
+
+            $days_list = [];
+            while ($start_date <= $end_date)
+            {
+                $start_date = $start_date->addDay();
+                $days_list[] = $start_date->copy();
+            }
+
+            $liable_turn = [];
+            foreach ($days_list as $day)
+            {
+                if (in_array($day, $this->showingDays()))
+                {
+                    if (!in_array($day, $this->nonWorkingDays()))
+                    {
+                        $liable_turn[] = $day;
+                    }
+                }
+            }
+
+            $turns[$key] =  $liable_turn;
+
+        }
+
+        return $liable_turn;
 
 
     }

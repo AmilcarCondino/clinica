@@ -21,13 +21,13 @@
                 {!! Form::label('monday', 'Lunes: ') !!}
                 {!! Form::select('monday', [ '0' => 'No', '1' => 'Si' ], null) !!}
                 {!! Form::label('tuesday', 'Martes: ') !!}
-                {!! Form::select('tuesday', [ '0' => 'No', '1' => 'Si' ], null) !!}
+                {!! Form::select('tuesday', [ '0' => 'No', '2' => 'Si' ], null) !!}
                 {!! Form::label('wednesday', 'Miercoles: ') !!}
-                {!! Form::select('wednesday', [ '0' => 'No', '1' => 'Si' ], null) !!}
+                {!! Form::select('wednesday', [ '0' => 'No', '3' => 'Si' ], null) !!}
                 {!! Form::label('thursday', 'Jueves: ') !!}
-                {!! Form::select('thursday', [ '0' => 'No', '1' => 'Si' ], null) !!}
+                {!! Form::select('thursday', [ '0' => 'No', '4' => 'Si' ], null) !!}
                 {!! Form::label('friday', 'Viernes: ') !!}
-                {!! Form::select('friday', [ '0' => 'No', '1' => 'Si' ], null) !!}
+                {!! Form::select('friday', [ '0' => 'No', '5' => 'Si' ], null) !!}
             </div>
         </div>
         <div class="col-sm-6">
