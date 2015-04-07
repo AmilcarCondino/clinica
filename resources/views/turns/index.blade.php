@@ -3,6 +3,8 @@
 @section('content')
 <h1>Testing Turns Index View</h1>
 
+<li><a href="/turnos/create">Crear</a></li>
+
 
 <dvi class = "row">
     <h3>turnos test</h3>
@@ -11,7 +13,9 @@
         {{ $key }}
         <ol>
             @foreach ($turn as $day)
-            <li>{{ $day }}</li>
+                @foreach ($day as $d)
+                <li>{{ $d }}</li>
+                @endforeach
             @endforeach
         </ol>
     </div>

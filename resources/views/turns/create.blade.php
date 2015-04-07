@@ -4,16 +4,17 @@
 
 <div class="container">
     <div class="col-sm-12">
-        <h1> Pacientes create page </h1>
+        <h1> Turnos create page </h1>
     </div>
     <div class="col-sm-12">
-        <a href="/pacientes">Pacientes index</a>
+        <a href="/turnos">Turnos index</a>
 
         <div class="col-sm-12">
-            {!! Form::open(array('url' => 'pacientes')) !!}
-            @include ('patients.form', ['submitButtonText' => 'Crear Paciente'])
+            {!! Form::open(array('url' => 'turnos/terapeuta')) !!}
+                @include ('turns.form', ['submitButtonText' => 'Crear Turno'])
             {!! Form::close() !!}
         </div>
+
     </div>
 </div>
 @stop

@@ -29,4 +29,6 @@ Route::resource('turnos_terapeutas', 'TherapistsGuardsController');
 
 Route::resource('turnos', 'TurnsController');
 
+Route::post('turnos/terapeuta', 'TurnsController@selectTherapist');
+
 Route::get('calendario', 'CalendarsController@index');

@@ -53,7 +53,48 @@ class TurnsController extends Controller {
 	public function create()
 	{
 		//
+        $therapists = Therapist::lists('name', 'id');
+        $patients = null;
+        $therapist = null;
+
+
+
+        return view('turns.create', compact('therapists', 'therapist', 'patients'));
 	}
+
+    public function selectTherapist()
+    {
+        //
+        $input = Request::all();
+
+
+
+        $therapist = Request::input('therapist');
+
+        if (!empty ($therapist))
+        {
+            $therapists = Therapist::lists('name', 'id');
+            $patients = Patient::lists('name', 'id');
+            $liable_turns = $this->liableTurns();
+            $appointment = $liable_turns[$therapist];
+            $office_id = Office::lists('number', 'id');
+
+            return view('turns.turn', compact('therapists', 'therapist', 'patients', 'appointment', 'office_id'));
+        }
+
+    }
+
+    public function turn()
+    {
+        //
+        $therapists = Therapist::lists('name', 'id');
+
+        $therapist = null;
+
+
+
+        return view('turns.create', compact('therapists', 'therapist'));
+    }
 
 	/**
 	 * Store a newly created resource in storage.
@@ -63,7 +104,13 @@ class TurnsController extends Controller {
 	public function store()
 	{
 		//
-	}
+
+
+
+
+    }
+
+
 
 	/**
 	 * Display the specified resource.
@@ -215,7 +262,15 @@ class TurnsController extends Controller {
                 $start_date = Carbon::parse($therapist_guard->start_date);
                 $end_date = Carbon::parse($therapist_guard->end_date);
 
-                $key = $therapist_guard->therapist->name;
+                $key = $therapist_guard->therapist->id;
+                if ($therapist_guard->turn == 0)
+                {
+                    $hour = 'Mañana';
+                }
+                if ($therapist_guard->turn == 1)
+                {
+                    $hour = 'Tarde';
+                }
 
 
                 //List of guards Week Days--------------->
@@ -264,7 +319,7 @@ class TurnsController extends Controller {
                         }
                     }
                 }
-                $turns[$key] =  $liable_turn;
+                $turns[$key][$hour] =  $liable_turn;
             }
         }
 
