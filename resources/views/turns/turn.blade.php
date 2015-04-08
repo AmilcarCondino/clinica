@@ -8,7 +8,6 @@
     </div>
     <div class="col-sm-12">
         <a href="/turnos">Turnos index</a>
-
         <div class="col-sm-12">
             {!! Form::open(array('url' => 'turnos')) !!}
                 @include ('turns.form', ['submitButtonText' => 'Crear Turno'])

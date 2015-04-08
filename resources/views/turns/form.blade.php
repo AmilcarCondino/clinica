@@ -1,6 +1,7 @@
 <div class="row">
     <div class="col-sm-12">
         <div class="row">
+
             <div class="col-sm-6">
                 {!! Form::label('therapist_id', 'Terapeuta: ') !!}
                 {!! Form::select('therapist_id', $therapists, $therapist, ['class' => 'form-control']) !!}

@@ -23,7 +23,7 @@
             </div>
             <div class="col-sm-6">
                 {!! Form::label('birth_date', 'Nacimiento: ') !!}
-                {!! Form::input('date', 'birth_date', date('Y-m-d'), ['class' => 'form-control']) !!}
+                {!! Form::input('birth_date', date('Y-m-d'), ['class' => 'form-control']) !!}
             </div>
             <div class="col-sm-6">
                 {!! Form::label('address', 'Domicilio: ') !!}

@@ -69,7 +69,7 @@ class TurnsController extends Controller {
 
 
 
-        $therapist = Request::input('therapist');
+        $therapist = Request::input('therapist_id');
 
         if (!empty ($therapist))
         {
@@ -104,9 +104,11 @@ class TurnsController extends Controller {
 	public function store()
 	{
 		//
+        $input = Request::all();
 
+        Turn::create($input);
 
-
+        return redirect('turnos');
 
     }
 
@@ -169,7 +171,7 @@ class TurnsController extends Controller {
     public function showingDays()
     {
 
-        //@TODO not hardcod the first and end dates. Check the first date.
+        //@TODO not hard code the first and end dates. Check the first date.
 
         $first_date = Carbon::today()->startOfMonth()->subWeek();
         $end_date = Carbon::today()->endOfMonth()->addWeek();
@@ -301,21 +303,32 @@ class TurnsController extends Controller {
                 $days_list = [];
                 while ($start_date <= $end_date)
                 {
-                    $start_date = $start_date->addDay();
-                    $days_list[] = $start_date->copy();
+                    $hm = 9;
+                    while ($hm <= 11)
+                    {
+                        $d =  $start_date->copy();
+                        $days_list[] = $d->hour($hm);
+                        $hm++;
+                    }
+                    $ht = 14;
+                    while ($ht <= 16)
+                    {
+                        $d =  $start_date->copy();
+                        $days_list[] = $d->hour($ht);
+                        $ht++;
+                    }
+                    $start_date->addDay();
                 }
+
 
                 $liable_turn = [];
                 foreach ($days_list as $day)
                 {
-                    if (in_array($day, $this->showingDays()))
+                    if (in_array($day->dayOfWeek, $guards_week_days))
                     {
-                        if (in_array($day->dayOfWeek, $guards_week_days))
+                        if (!in_array($day, $this->nonWorkingDays()))
                         {
-                            if (!in_array($day, $this->nonWorkingDays()))
-                            {
-                                $liable_turn[] = $day;
-                            }
+                            $liable_turn[$day->toDateString()] = $day;
                         }
                     }
                 }
