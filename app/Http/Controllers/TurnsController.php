@@ -26,7 +26,6 @@ class TurnsController extends Controller {
 	 */
 	public function index()
 	{
-        dd($this->ateneo());
         //Index ----------------------->
         $therapists = Therapist::all();
         $appointments = Turn::orderBy('appointment', 'ASC')->get();
@@ -299,7 +298,7 @@ class TurnsController extends Controller {
                 $key = $therapist_guard->therapist->id;
                 if ($therapist_guard->turn == 0)
                 {
-                    $hour = 'Mañana';
+                    $hour = 'Manana';
                 }
                 if ($therapist_guard->turn == 1)
                 {
@@ -362,7 +361,7 @@ class TurnsController extends Controller {
                         {
                             if (!in_array($day, $this->nonWorkingDays()))
                             {
-                                if ($hour == 'Mañana')
+                                if ($hour == 'Manana')
                                 {
                                     if ($day->hour == 9)
                                     {
@@ -409,32 +408,61 @@ class TurnsController extends Controller {
 
         foreach ($ateneos as $ateneo)
         {
-            $therapist = Therapist::where('career_year', $ateneo->course)->get();
-            $date9 = Carbon::parse($ateneo->date)->hour(9);
-            $therapist_id = $therapist[0]->id;
+            $therapists = Therapist::where('career_year', $ateneo->course)->get();
 
-            if (in_array($therapist_id, $freeGuards));
+            foreach ($therapists as $therapist)
             {
-                $free = $freeGuards[$therapist_id];
-                $m = 'Mañana';
-                if (in_array($m , $free))
+
+                if (array_key_exists($therapist->id, $freeGuards));
                 {
-                    dd();
+                    $ther_id_array = $freeGuards[$therapist->id];
+                    $m = 'Manana';
+                    if (array_key_exists($m, $ther_id_array))
+                    {
+                        $turn_array = $freeGuards[$therapist->id]['Manana'];
+                        $date9 = Carbon::parse($ateneo->date)->hour(9);
+                        $date = $date9->toDateTimeString();
+                        if (in_array($date, $turn_array))
+                        {
+                            unset($freeGuards[$therapist->id]['Manana'][$date]);
+                        }$date10 = Carbon::parse($ateneo->date)->hour(10);
+                        $date = $date10->toDateTimeString();
+                        if (in_array($date, $turn_array))
+                        {
+                            unset($freeGuards[$therapist->id]['Manana'][$date]);
+                        }$date11 = Carbon::parse($ateneo->date)->hour(11);
+                        $date = $date11->toDateTimeString();
+                        if (in_array($date, $turn_array))
+                        {
+                            unset($freeGuards[$therapist->id]['Manana'][$date]);
+                        }
+
+                    }
+                    $t = 'Tarde';
+                    if (array_key_exists($t, $ther_id_array))
+                    {
+                        $turn_array = $freeGuards[$therapist->id]['Tarde'];
+                        $date14 = Carbon::parse($ateneo->date)->hour(14);
+                        $date = $date14->toDateTimeString();
+                        if (in_array($date, $turn_array))
+                        {
+                            unset($freeGuards[$therapist->id]['Tarde'][$date]);
+                        }$date15 = Carbon::parse($ateneo->date)->hour(15);
+                        $date = $date15->toDateTimeString();
+                        if (in_array($date, $turn_array))
+                        {
+                            unset($freeGuards[$therapist->id]['Tarde'][$date]);
+                        }$date16 = Carbon::parse($ateneo->date)->hour(16);
+                        $date = $date16->toDateTimeString();
+                        if (in_array($date, $turn_array))
+                        {
+                            unset($freeGuards[$therapist->id]['Tarde'][$date]);
+                        }
+                    }
                 }
+
             }
 
-
-            unset($freeGuards[$therapist_id]['Mañana'][$date9]);
-            $date10 = Carbon::parse($ateneo->date)->hour(10);
-            unset($freeGuards[$therapist_id]['Mañana'][$date10]);
-            $date11 = Carbon::parse($ateneo->date)->hour(11);
-            unset($freeGuards[$therapist_id]['Mañana'][$date11]);
-            $date14 = Carbon::parse($ateneo->date)->hour(14);
-            unset($freeGuards[$therapist_id]['Tarde'][$date14]);
-            $date15 = Carbon::parse($ateneo->date)->hour(15);
-            unset($freeGuards[$therapist_id]['Tarde'][$date15]);
-            $date16 = Carbon::parse($ateneo->date)->hour(16);
-            unset($freeGuards[$therapist_id]['Tarde'][$date16]);
         }
 
         return $freeGuards;
@@ -443,7 +471,7 @@ class TurnsController extends Controller {
 
     public function freeTurns()
     {
-        $guards = $this->openGuards();
+        $guards = $this->ateneo();
         $appointments = Turn::all();
 
 
@@ -451,7 +479,7 @@ class TurnsController extends Controller {
         {
             if ($appointment->turn == 0)
             {
-                $turn = 'Mañana';
+                $turn = 'Manana';
             } else {
                 $turn = 'Tarde';
             }

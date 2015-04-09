@@ -26,7 +26,7 @@
       <file leaf-file-name="TurnsController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TurnsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="419" column="28" selection-start="11279" selection-end="11279" vertical-scroll-proportion="0.4116223" vertical-offset="6115" max-vertical-offset="7080">
+            <state line="27" column="5" selection-start="458" selection-end="458" vertical-scroll-proportion="0.44505495" vertical-offset="0" max-vertical-offset="7500">
               <folding>
                 <element signature="e#39#61#0" expanded="true" />
               </folding>
@@ -291,7 +291,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24986301" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2549133" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.516632" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.529106" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -320,19 +320,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/TurnsController.php</url>
-          <line>426</line>
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/TurnsController.php</url>
-          <line>421</line>
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="56" />
+      <option name="time" value="60" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -620,7 +608,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TurnsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="419" column="28" selection-start="11279" selection-end="11279" vertical-scroll-proportion="0.4116223" vertical-offset="6115" max-vertical-offset="7080">
+        <state line="27" column="5" selection-start="458" selection-end="458" vertical-scroll-proportion="0.44505495" vertical-offset="0" max-vertical-offset="7500">
           <folding>
             <element signature="e#39#61#0" expanded="true" />
           </folding>
