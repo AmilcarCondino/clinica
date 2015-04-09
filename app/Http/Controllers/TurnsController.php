@@ -26,22 +26,13 @@ class TurnsController extends Controller {
 	 */
 	public function index()
 	{
-		//
-        $first_date = Carbon::today()->startOfMonth()->subWeek();
-        $last_date = Carbon::today()->endOfMonth()->addWeek();
-        $today = Carbon::today()->addDays(6);
-
-        $turns = $this->liableTurns();
+        dd($this->ateneo());
+        //Index ----------------------->
         $therapists = Therapist::all();
+        $appointments = Turn::orderBy('appointment', 'ASC')->get();
 
-        $turn = $this->liableTurns();
-
-        $therapists_id = 3;
-
-        $therapist_guards = TherapistGuard::where('therapist_id', $therapists_id)->get();
-
-
-        return view('turns.index', compact('therapists', 'turns', 'therapist_guards', 'turn'));
+        return view('turns.index', compact('therapists', 'appointments'));
+        //<----------------------
 
     }
 
@@ -75,7 +66,7 @@ class TurnsController extends Controller {
         {
             $therapists = Therapist::lists('name', 'id');
             $patients = Patient::lists('name', 'id');
-            $liable_turns = $this->liableTurns();
+            $liable_turns = $this->freeTurns();
             $appointment = $liable_turns[$therapist];
             $office_id = Office::lists('number', 'id');
 
@@ -156,6 +147,11 @@ class TurnsController extends Controller {
 	public function destroy($id)
 	{
 		//
+        $turn = Turn::findOrFail($id);
+
+        if ($turn->delete()) {
+            return redirect('turnos');
+        }
 	}
 
 
@@ -180,11 +176,22 @@ class TurnsController extends Controller {
 
         while ($first_date <= $end_date)
         {
+            $hm = 9;
+            while ($hm <= 11)
+            {
+                $d =  $first_date->copy();
+                $showingDays[] = $d->hour($hm);
+                $hm++;
+            }
+            $ht = 14;
+            while ($ht <= 16)
+            {
+                $d =  $first_date->copy();
+                $showingDays[] = $d->hour($ht);
+                $ht++;
+            }
             $first_date = $first_date->addDay();
-            $showingDays[] = $first_date->copy();
         }
-
-
 
         return $showingDays;
     }
@@ -207,13 +214,24 @@ class TurnsController extends Controller {
         $days_list = [];
         while ($first_date <= $end_date)
         {
-            $first_date = $first_date->addDay();
-
             if ( $first_date->isWeekend() )
             {
-                $days_list[] = $first_date->copy();
+                $hm = 9;
+                while ($hm <= 11)
+                {
+                    $d =  $first_date->copy();
+                    $days_list[] = $d->hour($hm);
+                    $hm++;
+                }
+                $ht = 14;
+                while ($ht <= 16)
+                {
+                    $d =  $first_date->copy();
+                    $days_list[] = $d->hour($ht);
+                    $ht++;
+                }
             }
-
+            $first_date ->addDay();
         }
 
         //Sum a list of holidays to the list.
@@ -225,7 +243,21 @@ class TurnsController extends Controller {
         {
             if ($non_working_day->holiday == 1)
             {
-                $days_list[] = Carbon::parse($non_working_day->date);
+                $nwd = Carbon::parse($non_working_day->date);
+                $hm = 9;
+                while ($hm <= 11)
+                {
+                    $d =  $nwd->copy();
+                    $days_list[] = $d->hour($hm);
+                    $hm++;
+                }
+                $ht = 14;
+                while ($ht <= 16)
+                {
+                    $d =  $nwd->copy();
+                    $days_list[] = $d->hour($ht);
+                    $ht++;
+                }
             }
         }
 
@@ -239,7 +271,7 @@ class TurnsController extends Controller {
      *
      * @return array
      */
-    public function liableTurns ()
+    public function openGuards()
     {
 
         //@TODO make a god method of date range analise selection.
@@ -326,16 +358,109 @@ class TurnsController extends Controller {
                 {
                     if (in_array($day->dayOfWeek, $guards_week_days))
                     {
-                        if (!in_array($day, $this->nonWorkingDays()))
+                        if (in_array($day, $this->showingDays()))
                         {
-                            $liable_turn[$day->toDateString()] = $day;
+                            if (!in_array($day, $this->nonWorkingDays()))
+                            {
+                                if ($hour == 'Mañana')
+                                {
+                                    if ($day->hour == 9)
+                                    {
+                                        $liable_turn[$day->toDateTimeString()] = $day;
+                                    }
+                                    if ($day->hour == 10)
+                                    {
+                                        $liable_turn[$day->toDateTimeString()] = $day;
+                                    }
+                                    if ($day->hour == 11)
+                                    {
+                                        $liable_turn[$day->toDateTimeString()] = $day;
+                                    }
+                                }
+                                if ($hour == 'Tarde')
+                                {
+                                    if ($day->hour == 14)
+                                    {
+                                        $liable_turn[$day->toDateTimeString()] = $day;
+                                    }
+                                    if ($day->hour == 15)
+                                    {
+                                        $liable_turn[$day->toDateTimeString()] = $day;
+                                    }
+                                    if ($day->hour == 16)
+                                    {
+                                        $liable_turn[$day->toDateTimeString()] = $day;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
                 $turns[$key][$hour] =  $liable_turn;
             }
         }
-
         return $turns;
     }
+
+    public function ateneo()
+    {
+        $ateneos = NonWorkingDays::whereBetween('course', [1, 5])->get();
+        $freeGuards = $this->openGuards();
+
+        foreach ($ateneos as $ateneo)
+        {
+            $therapist = Therapist::where('career_year', $ateneo->course)->get();
+            $date9 = Carbon::parse($ateneo->date)->hour(9);
+            $therapist_id = $therapist[0]->id;
+
+            if (in_array($therapist_id, $freeGuards));
+            {
+                $free = $freeGuards[$therapist_id];
+                $m = 'Mañana';
+                if (in_array($m , $free))
+                {
+                    dd();
+                }
+            }
+
+
+            unset($freeGuards[$therapist_id]['Mañana'][$date9]);
+            $date10 = Carbon::parse($ateneo->date)->hour(10);
+            unset($freeGuards[$therapist_id]['Mañana'][$date10]);
+            $date11 = Carbon::parse($ateneo->date)->hour(11);
+            unset($freeGuards[$therapist_id]['Mañana'][$date11]);
+            $date14 = Carbon::parse($ateneo->date)->hour(14);
+            unset($freeGuards[$therapist_id]['Tarde'][$date14]);
+            $date15 = Carbon::parse($ateneo->date)->hour(15);
+            unset($freeGuards[$therapist_id]['Tarde'][$date15]);
+            $date16 = Carbon::parse($ateneo->date)->hour(16);
+            unset($freeGuards[$therapist_id]['Tarde'][$date16]);
+        }
+
+        return $freeGuards;
+    }
+
+
+    public function freeTurns()
+    {
+        $guards = $this->openGuards();
+        $appointments = Turn::all();
+
+
+        foreach ($appointments as $appointment)
+        {
+            if ($appointment->turn == 0)
+            {
+                $turn = 'Mañana';
+            } else {
+                $turn = 'Tarde';
+            }
+            unset($guards[$appointment->therapist_id][$turn][$appointment->appointment]);
+        }
+        return $guards;
+
+    }
+
+
+
 }
