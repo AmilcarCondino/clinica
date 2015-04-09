@@ -1,6 +1,6 @@
 <?php
 
-return [
+return array(
 
     /*
     |--------------------------------------------------------------------------
@@ -44,47 +44,46 @@ return [
     |
     */
 
-    'connections' => [
+    'connections' => array(
 
-        'sqlite' => [
+        'sqlite' => array(
             'driver'   => 'sqlite',
-            'database' => storage_path().'/database.sqlite',
+            'database' => __DIR__.'/../database/production.sqlite',
             'prefix'   => '',
-        ],
+        ),
 
-        'mysql' => [
+        'mysql' => array(
             'driver'    => 'mysql',
-            'host'      => env('DB_HOST', 'localhost'),
-            'database'  => env('DB_DATABASE', 'clinica'),
-            'username'  => env('DB_USERNAME', 'root'),
-            'password'  => env('DB_PASSWORD', 'alone'),
+            'host'      => $_ENV['OPENSHIFT_MYSQL_DB_HOST'] . ':' . $_ENV['OPENSHIFT_MYSQL_DB_PORT'],
+            'database'  => 'clinica',
+            'username'  => $_ENV['OPENSHIFT_MYSQL_DB_USERNAME'],
+            'password'  => $_ENV['OPENSHIFT_MYSQL_DB_PASSWORD'],
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
-            'strict'    => false,
-        ],
+        ),
 
-        'pgsql' => [
+        'pgsql' => array(
             'driver'   => 'pgsql',
-            'host'     => env('DB_HOST', 'localhost'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'host'     => 'localhost',
+            'database' => 'forge',
+            'username' => 'forge',
+            'password' => '',
             'charset'  => 'utf8',
             'prefix'   => '',
             'schema'   => 'public',
-        ],
+        ),
 
-        'sqlsrv' => [
+        'sqlsrv' => array(
             'driver'   => 'sqlsrv',
-            'host'     => env('DB_HOST', 'localhost'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'host'     => 'localhost',
+            'database' => 'database',
+            'username' => 'root',
+            'password' => '',
             'prefix'   => '',
-        ],
+        ),
 
-    ],
+    ),
 
     /*
     |--------------------------------------------------------------------------
@@ -110,16 +109,16 @@ return [
     |
     */
 
-    'redis' => [
+    'redis' => array(
 
         'cluster' => false,
 
-        'default' => [
+        'default' => array(
             'host'     => '127.0.0.1',
             'port'     => 6379,
             'database' => 0,
-        ],
+        ),
 
-    ],
+    ),
 
-];
+);

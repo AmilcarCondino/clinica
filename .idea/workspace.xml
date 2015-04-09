@@ -22,26 +22,7 @@
     <favorites_list name="www" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="database.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/database.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="0" selection-start="4036" selection-end="4036" vertical-scroll-proportion="-34.166668" vertical-offset="1055" max-vertical-offset="1965">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/app.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="71" selection-start="344" selection-end="344" vertical-scroll-proportion="0.16483517" vertical-offset="0" max-vertical-offset="3180">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -51,10 +32,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/patients/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/SupervisorsController.php" />
-        <option value="$PROJECT_DIR$/resources/views/supervisors/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/supervisors/form.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/therapists/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/therapists/form.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/therapists/edit.blade.php" />
@@ -100,8 +77,12 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/PatientsController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/TurnsController.php" />
-        <option value="$PROJECT_DIR$/config/database.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/config/.gitignore" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/.openshift/action_hooks/deploy" />
+        <option value="$PROJECT_DIR$/.openshift/config/database.php" />
+        <option value="$PROJECT_DIR$/config/database.php" />
       </list>
     </option>
   </component>
@@ -193,6 +174,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.openshift" />
+      <recent name="$PROJECT_DIR$/.openshift/action_hooks" />
       <recent name="$PROJECT_DIR$/resources/views/terapeutas" />
     </key>
   </component>
@@ -247,7 +230,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24986301" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2549133" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2549133" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.529106" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -281,21 +264,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_03_30_200846_create_non_working_days_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="26" selection-start="474" selection-end="474" vertical-scroll-proportion="0.3488372" vertical-offset="0" max-vertical-offset="817" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/non_working_days/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="494" selection-end="494" vertical-scroll-proportion="0.29020557" vertical-offset="0" max-vertical-offset="827" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/non_working_days/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="35" selection-start="207" selection-end="224" vertical-scroll-proportion="0.16071428" vertical-offset="0" max-vertical-offset="840" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/therapists/form.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="50" selection-start="1169" selection-end="1173" vertical-scroll-proportion="0.44642857" vertical-offset="0" max-vertical-offset="840" />
@@ -557,14 +525,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="5" selection-start="458" selection-end="458" vertical-scroll-proportion="0.44505495" vertical-offset="0" max-vertical-offset="7500">
           <folding>
-            <element signature="e#39#61#0" expanded="true" />
+            <element signature="e#39#61#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.php">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="0" selection-start="4036" selection-end="4036" vertical-scroll-proportion="-34.166668" vertical-offset="1055" max-vertical-offset="1965">
+        <state line="2" column="6" selection-start="54" selection-end="54" vertical-scroll-proportion="0.032119915" vertical-offset="0" max-vertical-offset="934">
           <folding />
         </state>
       </provider>
@@ -572,6 +540,27 @@
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="71" selection-start="344" selection-end="344" vertical-scroll-proportion="0.16483517" vertical-offset="0" max-vertical-offset="3180">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.openshift/action_hooks/deploy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="251" selection-end="251" vertical-scroll-proportion="0.096359745" vertical-offset="0" max-vertical-offset="934">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.openshift/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="35" selection-start="2017" selection-end="2017" vertical-scroll-proportion="0.31428573" vertical-offset="569" max-vertical-offset="1950">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="26" selection-start="1066" selection-end="1066" vertical-scroll-proportion="0.52747256" vertical-offset="0" max-vertical-offset="1965">
           <folding />
         </state>
       </provider>
