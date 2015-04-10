@@ -11,7 +11,7 @@
 
         <div class="col-sm-12">
             {!! Form::open(array('url' => 'pacientes')) !!}
-            @include ('patients.form', ['submitButtonText' => 'Crear Paciente'])
+                @include ('patients.form', ['submitButtonText' => 'Crear Paciente'])
             {!! Form::close() !!}
         </div>
     </div>
