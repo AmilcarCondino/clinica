@@ -23,76 +23,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="database.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="database.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="126" column="0" selection-start="3790" selection-end="3790" vertical-scroll-proportion="1.4126269" vertical-offset="637" max-vertical-offset="1980">
+            <state line="27" column="0" selection-start="925" selection-end="925" vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="1965">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="form.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/patients/form.blade.php">
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="72" selection-start="614" selection-end="614" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="1095">
+            <state line="3" column="19" selection-start="74" selection-end="74" vertical-scroll-proportion="0.048179872" vertical-offset="0" max-vertical-offset="934">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="form.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/therapist_guards/form.blade.php">
+      <file leaf-file-name="TurnsController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TurnsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="60" selection-start="1681" selection-end="1681" vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="675">
+            <state line="494" column="0" selection-start="14008" selection-end="14008" vertical-scroll-proportion="0.0" vertical-offset="7410" max-vertical-offset="7500">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/patients/create.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="481" selection-end="481" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="375">
-              <folding>
-                <marker date="1428678781000" expanded="true" signature="71:473" placeholder="..." />
-                <marker date="1428678781000" expanded="true" signature="99:151" placeholder="..." />
-                <marker date="1428678781000" expanded="true" signature="179:466" placeholder="..." />
-                <marker date="1428678781000" expanded="true" signature="261:455" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseSeeder.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="204" selection-end="223" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="405">
-              <folding>
-                <element signature="e#7#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserTableSeeder.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/seeds/UserTableSeeder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="229" selection-end="561" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="480">
-              <folding>
-                <element signature="e#7#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OfficesTableSeeder.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/seeds/OfficesTableSeeder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="24" selection-start="507" selection-end="507" vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="540">
-              <folding>
-                <element signature="e#7#38#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -199,6 +152,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -227,99 +181,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="seeds" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -384,15 +251,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="22" width="1670" height="1054" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6894619" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24986301" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27395576" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2800983" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.529106" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -400,6 +266,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6894619" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -547,9 +414,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Therapist.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="6" selection-start="96" selection-end="262" vertical-scroll-proportion="0.26373628" vertical-offset="0" max-vertical-offset="910">
-          <folding />
-        </state>
+        <state line="16" column="6" selection-start="96" selection-end="262" vertical-scroll-proportion="0.26373628" vertical-offset="0" max-vertical-offset="910" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Requests/Request.php">
@@ -612,11 +477,6 @@
         <state line="118" column="49" selection-start="3854" selection-end="3854" vertical-scroll-proportion="0.85384613" vertical-offset="993" max-vertical-offset="1905" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TurnsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="5" selection-start="458" selection-end="458" vertical-scroll-proportion="0.44505495" vertical-offset="0" max-vertical-offset="7500" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="71" selection-start="344" selection-end="344" vertical-scroll-proportion="0.16483517" vertical-offset="0" max-vertical-offset="3180" />
@@ -627,90 +487,68 @@
         <state line="20" column="2" selection-start="742" selection-end="742" vertical-scroll-proportion="0.32119915" vertical-offset="0" max-vertical-offset="934" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="6" selection-start="61" selection-end="61" vertical-scroll-proportion="0.048179872" vertical-offset="0" max-vertical-offset="934">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TherapistsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="113" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1830">
-          <folding />
-        </state>
+        <state line="6" column="0" selection-start="113" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1830" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="54" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.3956044" vertical-offset="0" max-vertical-offset="910">
-          <folding />
-        </state>
+        <state line="33" column="54" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.3956044" vertical-offset="0" max-vertical-offset="910" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="759" selection-end="759" vertical-scroll-proportion="0.5934066" vertical-offset="0" max-vertical-offset="910">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/patients/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="481" selection-end="481" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="375">
-          <folding>
-            <marker date="1428678781000" expanded="true" signature="71:473" placeholder="..." />
-            <marker date="1428678781000" expanded="true" signature="99:151" placeholder="..." />
-            <marker date="1428678781000" expanded="true" signature="179:466" placeholder="..." />
-            <marker date="1428678781000" expanded="true" signature="261:455" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/therapist_guards/form.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="60" selection-start="1681" selection-end="1681" vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="675">
-          <folding />
-        </state>
+        <state line="36" column="0" selection-start="759" selection-end="759" vertical-scroll-proportion="0.5934066" vertical-offset="0" max-vertical-offset="910" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/patients/form.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="72" selection-start="614" selection-end="614" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="1095">
-          <folding />
-        </state>
+        <state line="13" column="72" selection-start="614" selection-end="614" vertical-scroll-proportion="0.010989011" vertical-offset="185" max-vertical-offset="1095" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/UserTableSeeder.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/therapist_guards/form.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="229" selection-end="561" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="480">
-          <folding>
-            <element signature="e#7#38#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="29" column="60" selection-start="1681" selection-end="1681" vertical-scroll-proportion="0.47802198" vertical-offset="0" max-vertical-offset="910" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/OfficesTableSeeder.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/patients/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="24" selection-start="507" selection-end="507" vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="540">
-          <folding>
-            <element signature="e#7#38#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="19" column="0" selection-start="481" selection-end="481" vertical-scroll-proportion="0.31318682" vertical-offset="0" max-vertical-offset="910" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="204" selection-end="223" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="405">
-          <folding>
-            <element signature="e#7#38#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="14" column="0" selection-start="204" selection-end="223" vertical-scroll-proportion="0.21428572" vertical-offset="0" max-vertical-offset="910" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/UserTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="229" selection-end="561" vertical-scroll-proportion="0.16483517" vertical-offset="0" max-vertical-offset="910" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/OfficesTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="24" selection-start="507" selection-end="507" vertical-scroll-proportion="0.34615386" vertical-offset="0" max-vertical-offset="910" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="0" selection-start="3790" selection-end="3790" vertical-scroll-proportion="1.4126269" vertical-offset="637" max-vertical-offset="1980">
+        <state line="27" column="0" selection-start="925" selection-end="925" vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="1965">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TurnsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="494" column="0" selection-start="14008" selection-end="14008" vertical-scroll-proportion="0.0" vertical-offset="7410" max-vertical-offset="7500">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="19" selection-start="74" selection-end="74" vertical-scroll-proportion="0.048179872" vertical-offset="0" max-vertical-offset="934">
           <folding />
         </state>
       </provider>
