@@ -11,6 +11,7 @@
         <li><a href="/dias_no_laborales">Anulaciond de dias</a></li>
         <li><a href="/turnos_terapeutas">Configuracion de Guardias</a></li>
         <li><a href="/turnos">Turnos</a></li>
+        <li><a href="/calendario">Calendario</a></li>
     </ul>
 
 

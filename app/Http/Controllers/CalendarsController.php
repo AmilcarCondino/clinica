@@ -20,75 +20,121 @@ class CalendarsController extends Controller {
 
     public function index()
     {
+        $free_turns = Turn::freeTurns();
 
+        $foo = Turn::all();
 
-    $array = array(
-                    array(
-                        "title" => "turno libre",
-                        "start" => "2015-04-13T09:00:00",
-                        "end" => "2015-04-13T10:00:00",
-                        "backgroundColor" => "green"
-                    ),
-                    array(
-                        "title" => "turno libre",
-                        "start" => "2015-04-13T10:00:00",
-                        "end" => "2015-04-13T11:00:00",
-                        "backgroundColor" => "green"
-                    ),
-                    array(
-                        "title" => "Perez",
-                        "start" => "2015-04-13T11:00:00",
-                        "end" => "2015-04-13T12:00:00",
-                        "backgroundColor" => "red"
-                    ),
-                    array(
-                        "title" => "turno libre",
-                        "start" => "2015-04-13T15:00:00",
-                        "end" => "2015-04-13T16:00:00",
-                        "backgroundColor" => "red"
-                    ),
-                    array(
-                        "title" => "Perez",
-                        "start" => "2015-04-13T16:00:00",
-                        "end" => "2015-04-13T17:00:00",
-                        "backgroundColor" => "red"
-                    ),
-                    array(
-                        "title" => "turno libre",
-                        "start" => "2015-04-13T17:00:00",
-                        "end" => "2015-04-13T18:00:00",
-                        "backgroundColor" => "red"
-                    )
+        $reservas = json_encode($this->calendarReservedTurns($foo));
 
-    );
+        $libres =  json_encode($this->calendarFreeTurns($free_turns));
 
+        $completa = json_encode($this->calendarCompleta($free_turns, $foo));
 
-//dd(json_encode($array));
-
-        $foo =  $this->calendarList();
-
-        dd($foo);
-
-        return view('calendars.index', compact('array'));
+        return view('calendars.index', compact('libres', 'reservas', 'completa'));
 
     }
 
 
 
-    public function calendarList()
+    public function calendarFreeTurns($turns)
     {
-        $free_turns = Turn::freeTurns();
+        $list = [];
 
-
-
-
-        $calendar_list = [];
-
-        foreach ($free_turns as $i => $free_turns)
+        foreach ($turns as $i => $free_turn)
         {
-            $therapist = Therapist::where('id', $i)->get();
-            dd($therapist->name);
+            $therapist = Therapist::where('id', $i)->first();
+
+            foreach ($free_turn as $turn)
+            {
+                foreach ($turn as $date => $carbon)
+                {
+                    $search = ' ';
+                    $replace = 'T';
+                    $start = str_replace($search, $replace, $date);
+                    $end = str_replace($search, $replace, $carbon->addHour()->toDateTimeString());
+
+                    $list[] = array(
+                        "title" => $therapist->name,
+                        "start" => $start,
+                        "end"   => $end,
+                        "backgroundColor" => "green"
+                    );
+
+                }
+            }
         }
+        return $list;
+    }
+
+    public function calendarReservedTurns($turns)
+    {
+        $list = [];
+
+        foreach ($turns as $turn)
+        {
+            $search = ' ';
+            $replace = 'T';
+            $start = str_replace($search, $replace, $turn->appointment);
+            $carbon = Carbon::parse($start);
+            $end = str_replace($search, $replace, $carbon->addHour()->toDateTimeString());
+            $therapist = Therapist::where('id', $turn->therapist_id)->first();
+
+            $list[] = array(
+                "title" => $therapist->name,
+                "start" => $start,
+                "end"   => $end,
+                "backgroundColor" => "red"
+            );
+        }
+        return $list;
+    }
+
+    public function calendarCompleta($reserved, $free)
+    {
+        $list = [];
+
+        foreach ($reserved as $i => $free_turn)
+        {
+            $therapist = Therapist::where('id', $i)->first();
+
+            foreach ($free_turn as $turn)
+            {
+                foreach ($turn as $date => $carbon)
+                {
+                    $search = ' ';
+                    $replace = 'T';
+                    $start = str_replace($search, $replace, $date);
+                    $end = str_replace($search, $replace, $carbon->addHour()->toDateTimeString());
+
+                    $list[] = array(
+                        "title" => $therapist->name,
+                        "start" => $start,
+                        "end"   => $end,
+                        "backgroundColor" => "green"
+                    );
+
+                }
+            }
+        }
+
+        foreach ($free as $turn)
+        {
+            $search = ' ';
+            $replace = 'T';
+            $start = str_replace($search, $replace, $turn->appointment);
+            $carbon = Carbon::parse($start);
+            $end = str_replace($search, $replace, $carbon->addHour()->toDateTimeString());
+            $therapist = Therapist::where('id', $turn->therapist_id)->first();
+
+            $list[] = array(
+                "title" => $therapist->name,
+                "start" => $start,
+                "end"   => $end,
+                "backgroundColor" => "red"
+            );
+        }
+
+        return $list;
     }
 
 
