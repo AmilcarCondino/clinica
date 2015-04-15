@@ -78,9 +78,10 @@ class CalendarsController extends Controller {
             $carbon = Carbon::parse($start);
             $end = str_replace($search, $replace, $carbon->addHour()->toDateTimeString());
             $therapist = Therapist::where('id', $turn->therapist_id)->first();
+            $patient = Patient::where('id', $turn->patient_id)->first();
 
             $list[] = array(
-                "title" => $therapist->name,
+                "title" => $therapist->nam.' - '.$patient->last_name,
                 "start" => $start,
                 "end"   => $end,
                 "backgroundColor" => "red"
@@ -125,9 +126,10 @@ class CalendarsController extends Controller {
             $carbon = Carbon::parse($start);
             $end = str_replace($search, $replace, $carbon->addHour()->toDateTimeString());
             $therapist = Therapist::where('id', $turn->therapist_id)->first();
+            $patient = Patient::where('id', $turn->patient_id)->first();
 
             $list[] = array(
-                "title" => $therapist->name,
+                "title" => $therapist->name.' - '.$patient->last_name,
                 "start" => $start,
                 "end"   => $end,
                 "backgroundColor" => "red"
