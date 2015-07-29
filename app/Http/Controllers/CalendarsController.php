@@ -24,13 +24,18 @@ class CalendarsController extends Controller {
 
         $foo = Turn::all();
 
+        $to_day = Carbon::now();
+
+//        dd($bar); die();
+
+
         $reservas = json_encode($this->calendarReservedTurns($foo));
 
         $libres =  json_encode($this->calendarFreeTurns($free_turns));
 
         $completa = json_encode($this->calendarCompleta($free_turns, $foo));
 
-        return view('calendars.index', compact('libres', 'reservas', 'completa'));
+        return view('calendars.index', compact('libres', 'reservas', 'completa', 'to_day'));
 
     }
 
@@ -137,6 +142,24 @@ class CalendarsController extends Controller {
         }
 
         return $list;
+    }
+
+    public function calendarDaysInThisMonth ()
+    {
+        $list = [];
+
+        $to_day = Carbon::now();
+
+        $start_month = $to_day->copy()->startOfMonth();
+        $end_month = $to_day->copy()->endOfMonth();
+
+        $days_in_this_month = $start_month->daysInMonth;
+
+
+        $bar = $days_in_this_month;
+        return $bar;
+
+
     }
 
 
