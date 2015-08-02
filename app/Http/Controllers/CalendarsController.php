@@ -20,22 +20,27 @@ class CalendarsController extends Controller {
 
     public function index()
     {
+
+
         $free_turns = Turn::freeTurns();
 
-        $foo = Turn::all();
+        $turn = Turn::all();
 
         $to_day = Carbon::now();
 
-//        dd($bar); die();
+        $nwds = $this->calendarNonWorkingDaysDates();
 
+        $non_working_days = NonWorkingDays::all();
 
-        $reservas = json_encode($this->calendarReservedTurns($foo));
+        $reservas = json_encode($this->calendarReservedTurns($turn));
 
         $libres =  json_encode($this->calendarFreeTurns($free_turns));
 
-        $completa = json_encode($this->calendarCompleta($free_turns, $foo));
+        $completa = json_encode($this->calendarCompleta($free_turns, $turn));
 
-        return view('calendars.index', compact('libres', 'reservas', 'completa', 'to_day'));
+        $foo = $libres;
+
+        return view('calendars.index', compact('libres', 'reservas', 'completa', 'to_day', 'non_working_days', 'foo'));
 
     }
 
@@ -62,6 +67,7 @@ class CalendarsController extends Controller {
                         "title" => $therapist->name,
                         "start" => $start,
                         "end"   => $end,
+                        "consultorio" => $free_turn->office,
                         "backgroundColor" => "green"
                     );
 
@@ -89,6 +95,7 @@ class CalendarsController extends Controller {
                 "title" => $therapist->nam.' - '.$patient->last_name,
                 "start" => $start,
                 "end"   => $end,
+//                "consultorio" => $turns->office,
                 "backgroundColor" => "red"
             );
         }
@@ -159,6 +166,21 @@ class CalendarsController extends Controller {
         $bar = $days_in_this_month;
         return $bar;
 
+
+    }
+
+    public function calendarNonWorkingDaysDates ()
+    {
+        $list = [];
+
+        $nwds = NonWorkingDays::all();
+
+        foreach ($nwds as $nwd)
+        {
+            $list[] = Carbon::parse($nwd->date);
+        }
+
+        return $list;
 
     }
 

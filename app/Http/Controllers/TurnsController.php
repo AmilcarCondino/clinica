@@ -296,6 +296,9 @@ class TurnsController extends Controller {
                 $end_date = Carbon::parse($therapist_guard->end_date);
 
                 $key = $therapist_guard->therapist->id;
+
+                $office = $therapist_guard->office;
+
                 if ($therapist_guard->turn == 0)
                 {
                     $hour = 'Manana';
@@ -395,7 +398,7 @@ class TurnsController extends Controller {
                         }
                     }
                 }
-                $turns[$key][$hour] =  $liable_turn;
+                $turns[$key][$hour][$office] =  $liable_turn;
             }
         }
         return $turns;

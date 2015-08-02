@@ -15,7 +15,8 @@ class TherapistGuard extends Model {
         'wednesday',
         'thursday',
         'friday',
-        'turn'
+        'turn',
+        'office'
     ];
 
     /**

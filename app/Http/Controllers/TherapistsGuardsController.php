@@ -3,6 +3,7 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Office;
 use Request;
 use App\TherapistGuard;
 use App\Therapist;
@@ -31,8 +32,9 @@ class TherapistsGuardsController extends Controller {
 	{
 		//
         $therapists_id = Therapist::lists('last_name', 'id');
+        $offices = Office::lists('number', 'id');
 
-        return view('therapist_guards.create', compact('therapists_id'));
+        return view('therapist_guards.create', compact('therapists_id', 'offices'));
 
     }
 

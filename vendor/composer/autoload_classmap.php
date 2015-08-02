@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddOfficeColumnInTherapistGuardsTable' => $baseDir . '/database/migrations/2015_07_31_174830_add_office_column_in_TherapistGuards_table.php',
     'CreateCalendarsTable' => $baseDir . '/database/migrations/2015_04_01_133357_create_calendars_table.php',
     'CreateNonWorkingDaysTable' => $baseDir . '/database/migrations/2015_03_30_200846_create_non_working_days_table.php',
     'CreateOfficesTable' => $baseDir . '/database/migrations/2015_03_30_191102_create_offices_table.php',

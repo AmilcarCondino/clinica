@@ -29,6 +29,10 @@
                 {!! Form::label('friday', 'Viernes: ') !!}
                 {!! Form::select('friday', [ '0' => 'No', '5' => 'Si' ], null) !!}
             </div>
+            <div class="col-sm-6">
+                {!! Form::label('office', 'Consultorios: ') !!}
+                {!! Form::select('office', $offices, null, ['class' => 'form-control']) !!}
+            </div>
         </div>
         <div class="col-sm-6">
             {!! Form::submit($submitButtonText, ['class' => 'btn btn-sm-3 btn-success form-control']) !!}
