@@ -16,6 +16,10 @@ class AddOfficeColumnInTherapistGuardsTable extends Migration {
 
             $table->integer('office')->unsigned();
 
+        });
+        
+        Schema::table('therapist_guards', function(Blueprint $table) {
+
             $table->foreign('office')
                 ->references('number')
                 ->on('offices');
