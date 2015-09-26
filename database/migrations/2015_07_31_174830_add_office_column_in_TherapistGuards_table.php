@@ -14,7 +14,7 @@ class AddOfficeColumnInTherapistGuardsTable extends Migration {
     {
         Schema::table('therapist_guards', function(Blueprint $table) {
 
-            $table->integer('office')->unsigned();
+            $table->integer('office')->unique();
 
         });
         
